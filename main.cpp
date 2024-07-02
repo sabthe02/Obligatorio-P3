@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-using namespace std;
 
 int main()
 {
-    printf("Hola mundo.");
+    printf("Test");
 
     return 0;
 }
