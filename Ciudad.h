@@ -8,5 +8,8 @@ typedef struct{
 				String NombreCiudad;
                 }Ciudad;
 
+int darNumeroCiudad (Ciudad c);
+
+String darNombreCiudad (Ciudad c);
 
 #endif // CIUDAD_H_INCLUDED

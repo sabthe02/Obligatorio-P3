@@ -5,10 +5,10 @@
 1694133845 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\boolean.h
 	<stdio.h>
 
-1719935443 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.cpp
+1719939327 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.cpp
 	"Ciudad.h"
 
-1719935909 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.h
+1719939251 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.h
 	"String.h"
 
 1719934656 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.h
@@ -47,4 +47,7 @@
 
 1719936370 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.cpp
 	"Paradas.h"
+
+1719936404 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.cpp
+	"String.h"
 

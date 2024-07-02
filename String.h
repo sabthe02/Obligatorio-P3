@@ -30,5 +30,6 @@ void strcop (String &s1,String s2);
 // Determinar si un String es vacío
 boolean esVacio (String s);
 
-
+// intercambia 2 Strings
+void strswp (String &s1,String &s2)
 #endif // STRING_H_INCLUDED

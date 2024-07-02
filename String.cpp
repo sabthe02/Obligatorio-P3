@@ -93,4 +93,12 @@ return es;
 
 }
 
+void strswp (String &s1,String &s2)
+{
+ String aux;
+ strcop (aux,s1);
+ strcop (s1,s2);
+ strcop (s2,aux);
+}
+
 
