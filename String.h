@@ -32,4 +32,8 @@ boolean esVacio (String s);
 
 // intercambia 2 Strings
 void strswp (String &s1,String &s2);
+
+//Devuelve true si el primer string str1 es alfabéticamente menor que el string str2
+boolean strmen (String s1, String s2);
+
 #endif // STRING_H_INCLUDED

@@ -11,8 +11,11 @@ void Crear (Grafo &g) {
 
 }
 
-void InsertarVertice (Grafo &g, int vertice){
+void InsertarVertice (Grafo &g, int i, int j){
+//Para mí no es por acá, esto es agregar una arista, el vértice es i o j.
 
+g[i][j] = 1;
+g[j][i] = 1;
 
 
 }

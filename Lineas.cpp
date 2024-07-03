@@ -85,11 +85,10 @@ void Modify (Lineas &a, Linea viejo, Linea nuevo) {
             a->info = nuevo;
         }
         else {
-                if (/*StringEsMenor, es decir, viejo es menor que a->info*/(viejo,a->info)) {
+                if (strmen(darCodigoLinea(viejo),darCodigoLinea(a->info))) {
                     Modify(a->hizq, viejo, nuevo);
             }
             else {
-                /*String es Mayor, o sea, viejo es mayor que a->info*/
                 Modify (a->hder, viejo, nuevo);
             }
         }
@@ -120,7 +119,7 @@ if (streq(darCodigoLinea(a->info),darCodigoLinea(valor))== TRUE) {
         }
 }
 else {
-    if (/*StringEsMenor, es decir, valor es menor que a->info*/(valor,a->info)) {
+    if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info))) {
         Delete (a -> hizq, valor);
     }
         else {

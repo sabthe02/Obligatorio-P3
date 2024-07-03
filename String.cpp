@@ -101,4 +101,23 @@ void strswp (String &s1,String &s2)
  strcop (s2,aux);
 }
 
+boolean strmen (String s1, String s2){
+ int i = 0;
+ boolean encontre = FALSE;
+ boolean menor = FALSE;
+
+ while ((!encontre) && (s1[i] != '\0') && (s2[i] != '\0'))
+{
+ if (s1[i] != s2[i])
+ encontre = TRUE;
+
+ if (s1[i] < s2[i])
+ menor = TRUE;
+ i++;
+}
+ if ((!encontre) && (s2[i]!='\0'))
+ menor = TRUE;
+
+ return menor;
+}
 
