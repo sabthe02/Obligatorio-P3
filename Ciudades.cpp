@@ -41,3 +41,28 @@ Ciudad Kesimo (Ciudades ad, int k) {
 return ad.arre[k];
 
 }
+
+boolean existe (Ciudades ad, Ciudad ciudad) {
+int i = 0;
+boolean encontre = FALSE;
+
+while (i<ad.tope && !encontre) {
+    if (streq(darNombreCiudad(ad.arre[i]),darNombreCiudad(ciudad)) == TRUE) {
+        encontre = TRUE;
+    }
+    else {
+        i++;
+    }
+}
+return encontre;
+
+}
+
+void DesplegarArreglo(Ciudades ad) {
+int i = 0;
+while (i<ad.tope) {
+    desplegarCiudad(ad.arre[i]);
+    i++;
+}
+
+}

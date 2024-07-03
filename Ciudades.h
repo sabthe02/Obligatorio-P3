@@ -12,7 +12,7 @@ typedef struct {Ciudad arre[CANT];
 // Secuencia Crea una secuencia vacía.
 void Crear (Ciudades &ad);
 
-//Agrega un elemento de tipo T a la secuencia.
+//Agrega un elemento de tipo Ciudad a la secuencia.
 void InsFront (Ciudades &ad, Ciudad elemento);
 
 // Boolean Determina si la secuencia está vacía o no.
@@ -30,6 +30,9 @@ int Largo (Ciudades ad);
 //Devuelve el elemento que ocupa la posición K de la secuencia. Precondición: El largo de la secuencia es mayor o igual a K
 Ciudad Kesimo (Ciudades ad, int k);
 
+//Determina si ya existe el elemento en el arreglo;
+boolean existe (Ciudades ad, Ciudad ciudad);
 
+void DesplegarArreglo(Ciudades ad);
 
 #endif // ARREGLOCONTOPE_H_INCLUDED
