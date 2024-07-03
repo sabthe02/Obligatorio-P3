@@ -1,6 +1,6 @@
 #include "Grafo.h"
 
-void crearGrafo (Grafo &g) {
+void Crear (Grafo &g) {
     int i, j;
 
     for (i = 0; i <CANT_CIUD; i++) {
@@ -11,13 +11,66 @@ void crearGrafo (Grafo &g) {
 
 }
 
-void agregarAristaNoDirigido (Grafo &g, int fila, int columna) {
+void InsertarVertice (Grafo &g, int vertice){
 
-g[fila][columna] = 1;
-g[columna][fila] = 1;
+
 
 }
 
+void InsertarArista (Grafo &g, int fila, int columna) {
+
+g[fila][columna]=1;
+    if (fila != columna) {
+        g[columna][fila]=1;
+    }
+
+}
+
+boolean PerteneceVertice(Grafo g, int vertice) {
+boolean pertenece = FALSE;
+int i=0, j;
+
+do  {
+    j=0;
+    do {
+        if (i == vertice || j == vertice) {
+            pertenece = TRUE;
+        }
+        else {
+            j++;
+        }
+
+        }while (j <CANT_CIUD && !pertenece);
+        i++;
+    }while (i <CANT_CIUD && !pertenece);
+return pertenece;
+}
+
+boolean PerteneceArista(Grafo g, int fila, int columna) {
+boolean pertenece = FALSE;
+
+if (g[fila][columna] == 1){
+    pertenece = TRUE;
+}
+return pertenece;
+
+}
+
+int GradoVertice (Grafo g, int vertice) {
+
+int cont = 0;
+
+for (int j=0; j<CANT_CIUD ;j++) {
+        if (g[vertice][j]==1) {
+                cont++;
+        }
+}
+    if (g[vertice][vertice]==1) {
+        cont++;
+    }
+return cont;
+
+}
 
 void DFS (Grafo g, int actual, boolean visitado[CANT_CIUD]) {
 int j;

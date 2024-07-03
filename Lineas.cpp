@@ -19,7 +19,7 @@ return es;
 }
 
 
-void Insert (Lineas &a, String valor) {
+void Insert (Lineas &a, Linea valor) {
 
 if (a == NULL) {
     a = new nodo;
@@ -28,7 +28,7 @@ if (a == NULL) {
     a->hder = NULL;
     }
     else {
-        if (valor < a->info) {
+        if (darCodigoLinea(valor) < darCodigoLinea(a->info)) {
             Insert (a->hizq, valor);
         }
         else {
@@ -39,16 +39,16 @@ if (a == NULL) {
 }
 
 
-boolean Member (Lineas a, String valor) {
+boolean Member (Lineas a, Linea valor) {
 if (a == NULL) {
     return FALSE;
 }
 else {
-    if (valor == a->info) {
+    if (darCodigoLinea(valor) == darCodigoLinea(a->info)) {
         return TRUE;
     }
     else {
-            if (valor < a->info) {
+            if (darCodigoLinea(valor) < darCodigoLinea(a->info)) {
                 return Member (a->hizq, valor);
             }
             else {
@@ -61,14 +61,14 @@ else {
 }
 
 
-String Find (Lineas a, String valor) {
+Linea Find (Lineas a, Linea valor) {
 
     if (a!=NULL){
-        if (a->info==valor) {
+        if (darCodigoLinea(a->info)==darCodigoLinea(valor)) {
             return a->info;
         }
         else {
-                if (valor < a->info) {
+                if (darCodigoLinea(valor) < darCodigoLinea(a->info)) {
                     return Find(a->hizq, valor);
             }
             else {
@@ -78,6 +78,74 @@ String Find (Lineas a, String valor) {
     }
 }
 
+void Modify (Lineas &a, Linea viejo, Linea nuevo) {
+
+    if (a!=NULL){
+        if (streq(darCodigoLinea(a->info),darCodigoLinea(viejo))== TRUE) {
+            a->info = nuevo;
+        }
+        else {
+                if (/*StringEsMenor, es decir, viejo es menor que a->info*/(viejo,a->info)) {
+                    Modify(a->hizq, viejo, nuevo);
+            }
+            else {
+                /*String es Mayor, o sea, viejo es mayor que a->info*/
+                Modify (a->hder, viejo, nuevo);
+            }
+        }
+    }
+
+}
+
+void Delete (Lineas &a, Linea valor) {
+
+Lineas aux;
+
+if (streq(darCodigoLinea(a->info),darCodigoLinea(valor))== TRUE) {
+        if (a -> hder == NULL) {
+            aux = a -> hizq;
+            delete a;
+            a = aux;
+        }
+        else {
+            if (a -> hizq == NULL) {
+                aux = a -> hder;
+                delete a;
+                a = aux;
+            }
+            else {
+                a -> info = Minimo (a -> hder);
+                Borrar_Minimo (a -> hder);
+            }
+        }
+}
+else {
+    if (/*StringEsMenor, es decir, valor es menor que a->info*/(valor,a->info)) {
+        Delete (a -> hizq, valor);
+    }
+        else {
+            Delete (a -> hder, valor);
+        }
+}
 
 
+}
 
+void Borrar_Minimo (Lineas &a) {
+    Lineas aux;
+    if (a -> hizq == NULL) {
+            aux = a -> hder;
+            delete a;
+            a = aux;
+    }
+    else {
+            Borrar_Minimo (a -> hizq);
+    }
+}
+
+Linea Minimo (Lineas a) {
+    while (a -> hizq != NULL)   {
+            a = a -> hizq;
+    }
+    return (a->info);
+}

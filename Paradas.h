@@ -1,6 +1,5 @@
 #ifndef PARADAS_H_INCLUDED
 #define PARADAS_H_INCLUDED
-#include "Boolean.h"
 #include "String.h"
 
 typedef struct nodoL {  String info;
@@ -11,10 +10,9 @@ typedef struct { Nodo * prim;
                 Nodo * ult;
                 } Paradas;
 
-//b) Una estructura de LPPF.
+
  void Make (Paradas &L);
 
- //Inserta el nuevo elemento al final de la lista.
  void Insback (Paradas &L, String e);
 
  boolean Empty (Paradas L);

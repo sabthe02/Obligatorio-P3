@@ -31,5 +31,5 @@ void strcop (String &s1,String s2);
 boolean esVacio (String s);
 
 // intercambia 2 Strings
-void strswp (String &s1,String &s2)
+void strswp (String &s1,String &s2);
 #endif // STRING_H_INCLUDED
