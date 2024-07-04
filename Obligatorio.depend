@@ -14,10 +14,10 @@
 1720088875 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.h
 	"Boolean.h"
 
-1720107797 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.cpp
+1720114284 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.cpp
 	"Linea.h"
 
-1720108082 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\main.cpp
+1720124387 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\main.cpp
 	<stdio.h>
 	"Ciudades.h"
 	"Grafo.h"
@@ -39,20 +39,22 @@
 	"Boolean.h"
 	"constantes.h"
 
-1720107911 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.cpp
+1720125750 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.cpp
 	"Lineas.h"
 
-1720107480 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.h
+1720125441 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.h
 	"Boolean.h"
 	"Linea.h"
 
-1720107871 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.h
+1720114131 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.h
 	"Paradas.h"
+	"Ciudad.h"
 
-1720086247 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.h
+1720123752 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.h
 	"String.h"
+	"Ciudad.h"
 
-1720091585 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.cpp
+1720124431 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.cpp
 	"Paradas.h"
 
 1720088839 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.cpp

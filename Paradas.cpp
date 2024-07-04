@@ -49,7 +49,7 @@ Ciudad Back (Paradas L) {
 
  void Desplegar(Paradas L) {
  while (L.prim!=NULL) {
-    print(L.prim->info);
+    print(darNombreCiudad(L.prim->info));
     printf(" - ");
     L.prim = L.prim->sig;
  }

@@ -1,6 +1,7 @@
 #ifndef PARADAS_H_INCLUDED
 #define PARADAS_H_INCLUDED
 #include "String.h"
+#include "Ciudad.h"
 
 typedef struct nodoL {  Ciudad info;
                         nodoL *sig;

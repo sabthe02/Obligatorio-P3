@@ -45,4 +45,6 @@ Linea Minimo (Lineas a);
 //Desplegar todas las lineas, ordenadas de menor a mayot
 void DesplegarLineas (Lineas a);
 
+void agregarParadaALineas (Lineas &a, String codigo, Ciudad c);
+
 #endif // LINEAS_H_INCLUDED

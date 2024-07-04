@@ -178,7 +178,7 @@ void Opcion5(Lineas &lineas) {
     Linea aux;
     cargarLinea(aux);
 
-    if (!Member(lineas, aux)) {
+    if (!Member(lineas, darCodigoLinea(aux))) {
         Insert(lineas,aux);
         printf("\nLinea agregada con exito\n");
     }
@@ -204,15 +204,15 @@ void Opcion7 (Lineas &lineas, Ciudades ciudades, Grafo grafo) {
     int codigo;
     strcrear(num);
     if (EstaLlena(ciudades)==TRUE) {
-        printf("\nIngrese un codigo de linea para agregar una parada a su recorrido");
+        printf("\nIngrese un codigo de linea para agregar una parada a su recorrido ");
         scan(num);
-        printf("\nIngrese numero de ciudad para agregar una parada en esa ciudad");
+        printf("\nIngrese numero de ciudad para agregar una parada en esa ciudad ");
         scanf("%d", &codigo);
 
 
         if (Member(lineas,num)) {
-            if (buscarRuta(grafo, codigo, Back(darParadas(Find(lineas,num)))){
-
+            if (buscarRuta(grafo, codigo, darNumeroCiudad(Back(darParadas(Find(lineas,num)))))==TRUE){
+                agregarParadaALineas(lineas,num,Kesimo(ciudades,codigo));
                 }
                 else {
                     printf("\nNo existe ruta entre la ciudad y el destino de la linea a agregar");
@@ -277,7 +277,7 @@ int main()
             break;
         }
         case 7:
-        {   Opcion7(lineas, ciudades);
+        {   Opcion7(lineas, ciudades, grafo);
             break;
         }
         case 8:

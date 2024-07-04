@@ -160,3 +160,11 @@ void DesplegarLineas (Lineas a) {
 }
 
 
+void agregarParadaALineas (Lineas &a, String codigo, Ciudad c){
+
+Linea laux = Find(a, codigo);
+
+agregarParadaALinea(laux,c);
+
+
+}
