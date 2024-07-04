@@ -7,7 +7,7 @@ typedef struct nodoA {
                         Linea info;
                         nodoA *hizq;
                         nodoA *hder;
-                        } nodo;
+                    } nodo;
 
 typedef nodo *Lineas;
 // Operaciones primitivas
@@ -46,5 +46,11 @@ Linea Minimo (Lineas a);
 void DesplegarLineas (Lineas a);
 
 void agregarParadaALineas (Lineas &a, String codigo, Ciudad c);
+
+void imprimirRecorrido(Lineas l, String codigoLinea);
+
+boolean lineaTieneParadas(Lineas l, String codigoLinea);
+
+void Eliminar(Lineas &a);
 
 #endif // LINEAS_H_INCLUDED

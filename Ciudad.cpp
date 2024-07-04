@@ -9,6 +9,18 @@ Ciudad crearCiudad(int nroCiud, String Nombre)
     return c;
 }
 
+void mostrarNombreCiudad(Ciudad c)
+{
+    printf("Numero de Ciudad: %d, Nombre: ", c.NumeroCiudad);
+    print(c.NombreCiudad);
+    printf("\n");
+
+}
+
+void borrarCiudad(Ciudad &c)
+{
+    strdestruir(c.NombreCiudad);
+}
 
 int darNumeroCiudad (Ciudad c)
 {

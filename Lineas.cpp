@@ -1,38 +1,45 @@
 #include "Lineas.h"
 
 
-void Make (Lineas &a) {
-
-a = NULL;
-
+void Make (Lineas &a)
+{
+    a = NULL;
 }
 
-boolean Vacio (Lineas a) {
-boolean es;
+boolean Vacio (Lineas a)
+{
+    boolean es;
 
-if (a == NULL) {
-    es = TRUE;
-}
-else {
-    es = FALSE;
-}
-return es;
-}
-
-
-void Insert (Lineas &a, Linea valor) {
-
-if (a == NULL) {
-    a = new nodo;
-    a->info = valor;
-    a->hizq = NULL;
-    a->hder = NULL;
+    if (a == NULL)
+    {
+        es = TRUE;
     }
-    else {
-        if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info))) {
+    else
+    {
+        es = FALSE;
+    }
+    return es;
+}
+
+
+void Insert (Lineas &a, Linea valor)
+{
+
+    if (a == NULL)
+    {
+        a = new nodo;
+        a->info = valor;
+        a->hizq = NULL;
+        a->hder = NULL;
+    }
+    else
+    {
+        if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info)))
+        {
             Insert (a->hizq, valor);
         }
-        else {
+        else
+        {
             Insert (a->hder, valor);
         }
     }
@@ -40,57 +47,76 @@ if (a == NULL) {
 }
 
 
-boolean Member (Lineas a, String valor) {
-if (a == NULL) {
-    return FALSE;
+boolean Member (Lineas a, String valor)
+{
+    if (a == NULL)
+    {
+        return FALSE;
 
-}
-else {
-    if (streq(valor,darCodigoLinea(a->info))==TRUE) {
-        return TRUE;
     }
-    else {
-            if (strmen(valor,darCodigoLinea(a->info))==TRUE) {
+    else
+    {
+        if (streq(valor,darCodigoLinea(a->info))==TRUE)
+        {
+            return TRUE;
+        }
+        else
+        {
+            if (strmen(valor,darCodigoLinea(a->info))==TRUE)
+            {
                 return Member (a->hizq, valor);
             }
-            else {
+            else
+            {
                 return Member (a->hder, valor);
             }
+        }
     }
-}
 
 
 }
 
 
-Linea Find (Lineas a, String valor) {
+Linea Find (Lineas a, String valor)
+{
 
-    if (a!=NULL){
-        if (streq(darCodigoLinea(a->info),valor)==TRUE) {
+    if (a!=NULL)
+    {
+        if (streq(darCodigoLinea(a->info),valor)==TRUE)
+        {
             return a->info;
         }
-        else {
-                if (strmen(valor, darCodigoLinea(a->info))==TRUE) {
-                    return Find(a->hizq, valor);
+        else
+        {
+            if (strmen(valor, darCodigoLinea(a->info))==TRUE)
+            {
+                return Find(a->hizq, valor);
             }
-            else {
+            else
+            {
                 return Find(a->hder, valor);
             }
         }
     }
 }
 
-void Modify (Lineas &a, Linea viejo, Linea nuevo) {
+void Modify (Lineas &a, Linea viejo, Linea nuevo)
+{
 
-    if (a!=NULL){
-        if (streq(darCodigoLinea(a->info),darCodigoLinea(viejo))== TRUE) {
+    if (a!=NULL)
+    {
+        if (streq(darCodigoLinea(a->info),darCodigoLinea(viejo))== TRUE)
+        {
             a->info = nuevo;
         }
-        else {
-                if (strmen(darCodigoLinea(viejo),darCodigoLinea(a->info))==TRUE) {
-                    Modify(a->hizq, viejo, nuevo);
+        else
+        {
+            if (strmen(darCodigoLinea(viejo),darCodigoLinea(a->info))==TRUE)
+            {
+                Modify(a->hizq, viejo, nuevo);
             }
-            else {
+            else
+            {
                 Modify (a->hder, viejo, nuevo);
             }
         }
@@ -98,73 +124,138 @@ void Modify (Lineas &a, Linea viejo, Linea nuevo) {
 
 }
 
-void Delete (Lineas &a, Linea valor) {
+void Delete (Lineas &a, Linea valor)
+{
 
-Lineas aux;
+    Lineas aux;
 
-if (streq(darCodigoLinea(a->info),darCodigoLinea(valor))== TRUE) {
-        if (a -> hder == NULL) {
+    if (streq(darCodigoLinea(a->info),darCodigoLinea(valor))== TRUE)
+    {
+        if (a -> hder == NULL)
+        {
             aux = a -> hizq;
             delete a;
             a = aux;
         }
-        else {
-            if (a -> hizq == NULL) {
+        else
+        {
+            if (a -> hizq == NULL)
+            {
                 aux = a -> hder;
                 delete a;
                 a = aux;
             }
-            else {
+            else
+            {
                 a -> info = Minimo (a -> hder);
                 Borrar_Minimo (a -> hder);
             }
         }
-}
-else {
-    if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info))==TRUE) {
-        Delete (a -> hizq, valor);
     }
-        else {
+    else
+    {
+        if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info))==TRUE)
+        {
+            Delete (a -> hizq, valor);
+        }
+        else
+        {
             Delete (a -> hder, valor);
         }
-}
+    }
 
 
 }
 
-void Borrar_Minimo (Lineas &a) {
+void Borrar_Minimo (Lineas &a)
+{
     Lineas aux;
-    if (a -> hizq == NULL) {
-            aux = a -> hder;
-            delete a;
-            a = aux;
+    if (a -> hizq == NULL)
+    {
+        aux = a -> hder;
+        delete a;
+        a = aux;
     }
-    else {
-            Borrar_Minimo (a -> hizq);
+    else
+    {
+        Borrar_Minimo (a -> hizq);
     }
 }
 
-Linea Minimo (Lineas a) {
-    while (a -> hizq != NULL)   {
-            a = a -> hizq;
+Linea Minimo (Lineas a)
+{
+    while (a -> hizq != NULL)
+    {
+        a = a -> hizq;
     }
     return (a->info);
 }
 
-void DesplegarLineas (Lineas a) {
-    if (a!=NULL) {
-    DesplegarLineas(a->hizq);
-    desplegarLineaBasico(a->info);
-    DesplegarLineas(a->hder);
+void DesplegarLineas (Lineas a)
+{
+    if (a!=NULL)
+    {
+        DesplegarLineas(a->hizq);
+        desplegarLineaBasico(a->info);
+        DesplegarLineas(a->hder);
     }
 }
 
 
-void agregarParadaALineas (Lineas &a, String codigo, Ciudad c){
+void agregarParadaALineas (Lineas &a, String codigo, Ciudad c)
+{
+    ///Hay que buscar en una recorrida recursiva el elemento para modificarlo.
+    if (a!=NULL)
+    {
+        if (streq(darCodigoLinea(a->info),codigo)==TRUE)
+        {
+            agregarParadaALinea(a->info,c);
+        }
+        else
+        {
+            if (strmen(codigo, darCodigoLinea(a->info))==TRUE)
+            {
+                agregarParadaALineas(a->hizq, codigo, c);
+            }
+            else
+            {
+                agregarParadaALineas(a->hder, codigo, c);
 
-Linea laux = Find(a, codigo);
+            }
+        }
+    }
+}
 
-agregarParadaALinea(laux,c);
+void imprimirRecorrido(Lineas l, String codigoLinea)
+{
+    Linea laux = Find(l, codigoLinea);
+
+    imprimirParadas(laux);
+}
+
+boolean lineaTieneParadas(Lineas l, String codigoLinea)
+{
+    boolean resp = FALSE;
+    Linea laux = Find(l, codigoLinea);
+
+    if(darCantidadParadas(laux) > 0)
+    {
+        resp = TRUE;
+    }
+
+    return resp;
+}
+
+void Eliminar(Lineas &a)
+{
+    if (a != NULL)
+    {
+        Eliminar (a -> hizq);
+        Eliminar (a -> hder);
 
 
+        Eliminar(a->info);
+        delete a;
+
+    }
 }

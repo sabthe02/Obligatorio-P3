@@ -12,6 +12,10 @@ typedef struct{
 
 Ciudad crearCiudad(int nroCiud, String Nombre);
 
+void mostrarNombreCiudad(Ciudad c);
+
+void borrarCiudad(Ciudad &c);
+
 /*Selectoras*/
 int darNumeroCiudad (Ciudad c);
 
