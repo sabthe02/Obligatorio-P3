@@ -19,16 +19,21 @@ String s;
 strcrear(s);
 scan(s);
 l.CodigoLinea = s;
-delete s;
 l.CantidadParadas = 0;
 Make (l.Paradas);
 
 }
 
-void desplegarLinea (Linea l) {
+void agregarParadaALinea (Linea &l, Ciudad c) {
+   Insback(l.Paradas,c);
+   l.CantidadParadas++;
+
+}
+
+void desplegarLineaBasico (Linea l) {
+
+printf("\nCodigo de linea: ");
 print(l.CodigoLinea);
-printf(" - ");
 printf("\nCantidad de paradas: %d", l.CantidadParadas);
-printf("\nParadas: ");
-Desplegar(l.Paradas);
+printf("\n");
 }

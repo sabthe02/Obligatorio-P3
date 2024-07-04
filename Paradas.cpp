@@ -6,7 +6,7 @@ void Make (Paradas &L) {
 }
 
 
-void Insback (Paradas &L, String e) {
+void Insback (Paradas &L, Ciudad e) {
     Nodo * nuevo = new Nodo;
     nuevo -> info = e;
     nuevo -> sig = NULL;
@@ -29,7 +29,7 @@ boolean Empty (Paradas L) {
 }
 
 
-String Front (Paradas L) {
+Ciudad Front (Paradas L) {
     return (L.prim -> info);
 }
 
@@ -40,6 +40,11 @@ void RemFront (Paradas &L) {
     L.prim = aux;
     if (L.prim == NULL);
     L.ult = NULL;
+}
+
+Ciudad Back (Paradas L) {
+    return (L.ult->info);
+
 }
 
  void Desplegar(Paradas L) {

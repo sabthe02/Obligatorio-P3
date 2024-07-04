@@ -23,11 +23,11 @@ boolean Vacio (Lineas a);
 void Insert (Lineas &a, Linea valor);
 
 //Determina si en el diccionario existe un elemento con la clave especificada.
-boolean Member (Lineas a, Linea valor);
+boolean Member (Lineas a, String valor);
 
 //Dada la clave de un elemento devuelve el elemento con dicha clave
 //Precondición: el elemento es miembro del diccionario.
-Linea Find (Lineas a, Linea valor);
+Linea Find (Lineas a, String valor);
 
 // Sustituye el viejo elemento de tipo T en el diccionario por el nuevo elemento.
 //Precondición: el elemento a sustituir es miembro del diccionario.
@@ -41,5 +41,8 @@ void Delete (Lineas &a, Linea valor);
 void Borrar_Minimo (Lineas &a);
 
 Linea Minimo (Lineas a);
+
+//Desplegar todas las lineas, ordenadas de menor a mayot
+void DesplegarLineas (Lineas a);
 
 #endif // LINEAS_H_INCLUDED

@@ -2,7 +2,7 @@
 #define PARADAS_H_INCLUDED
 #include "String.h"
 
-typedef struct nodoL {  String info;
+typedef struct nodoL {  Ciudad info;
                         nodoL *sig;
                         } Nodo;
 
@@ -15,13 +15,17 @@ typedef struct { Nodo * prim;
 
  void Make (Paradas &L);
 
- void Insback (Paradas &L, String e);
+ void Insback (Paradas &L, Ciudad e);
 
  boolean Empty (Paradas L);
 
- String Front (Paradas L);
+ Ciudad Front (Paradas L);
 
  void RemFront (Paradas &L);
+
+ //Devuelve el último elemento del deque
+ // Precondición: el deque no está vacío
+ Ciudad Back (Paradas L);
 
  void Desplegar(Paradas L);
 

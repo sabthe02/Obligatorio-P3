@@ -40,17 +40,17 @@ if (a == NULL) {
 }
 
 
-boolean Member (Lineas a, Linea valor) {
+boolean Member (Lineas a, String valor) {
 if (a == NULL) {
     return FALSE;
 
 }
 else {
-    if (streq(darCodigoLinea(valor),darCodigoLinea(a->info))==TRUE) {
+    if (streq(valor,darCodigoLinea(a->info))==TRUE) {
         return TRUE;
     }
     else {
-            if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info))==TRUE) {
+            if (strmen(valor,darCodigoLinea(a->info))==TRUE) {
                 return Member (a->hizq, valor);
             }
             else {
@@ -63,14 +63,14 @@ else {
 }
 
 
-Linea Find (Lineas a, Linea valor) {
+Linea Find (Lineas a, String valor) {
 
     if (a!=NULL){
-        if (streq(darCodigoLinea(a->info),darCodigoLinea(valor))==TRUE) {
+        if (streq(darCodigoLinea(a->info),valor)==TRUE) {
             return a->info;
         }
         else {
-                if (strmen(darCodigoLinea(valor), darCodigoLinea(a->info))==TRUE) {
+                if (strmen(valor, darCodigoLinea(a->info))==TRUE) {
                     return Find(a->hizq, valor);
             }
             else {
@@ -150,3 +150,13 @@ Linea Minimo (Lineas a) {
     }
     return (a->info);
 }
+
+void DesplegarLineas (Lineas a) {
+    if (a!=NULL) {
+    DesplegarLineas(a->hizq);
+    desplegarLineaBasico(a->info);
+    DesplegarLineas(a->hder);
+    }
+}
+
+

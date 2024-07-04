@@ -16,10 +16,6 @@ void Crear (Grafo &g);
 //Crear:   Grafo Crea un grafo vacío.
 void Crear (Grafo &g);
 
-//InsertarVertice : Grafo x V  Grafo Inserta el nuevo vértice al grafo. Precondición: el vértice no pertenece al grafo.
-void InsertarVertice (Grafo &g, int vertice);
-//Cómo insertar un vértice si ya sabemos de antemano cuantos vértices hay y sus posiciones??
-
 //InsertarArista : Grafo x A  Grafo Inserta la nueva arista al grafo. Precondición: la arista no pertenece al grafo.
 void InsertarArista (Grafo &g, int fila, int columna);
 

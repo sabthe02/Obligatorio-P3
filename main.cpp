@@ -175,17 +175,56 @@ void Opcion4(Ciudades c, Grafo graf)
 }
 
 void Opcion5(Lineas &lineas) {
-Linea aux;
-cargarLinea(aux);
+    Linea aux;
+    cargarLinea(aux);
 
-if (!Member(lineas, aux)) {
-    Insert(lineas,aux);
-    printf("\nLinea agregada con exito\n");
-}
-else {
-    printf("\nYa existe una linea con el mismo codigo");
+    if (!Member(lineas, aux)) {
+        Insert(lineas,aux);
+        printf("\nLinea agregada con exito\n");
+    }
+    else {
+        printf("\nYa existe una linea con el mismo codigo");
+    }
+
+
 }
 
+void Opcion6 (Lineas lineas) {
+
+    if (!Vacio(lineas)){
+        DesplegarLineas(lineas);
+    }
+    else {
+        printf("\nNo hay lineas registradas");
+    }
+}
+
+void Opcion7 (Lineas &lineas, Ciudades ciudades, Grafo grafo) {
+    String num;
+    int codigo;
+    strcrear(num);
+    if (EstaLlena(ciudades)==TRUE) {
+        printf("\nIngrese un codigo de linea para agregar una parada a su recorrido");
+        scan(num);
+        printf("\nIngrese numero de ciudad para agregar una parada en esa ciudad");
+        scanf("%d", &codigo);
+
+
+        if (Member(lineas,num)) {
+            if (buscarRuta(grafo, codigo, Back(darParadas(Find(lineas,num)))){
+
+                }
+                else {
+                    printf("\nNo existe ruta entre la ciudad y el destino de la linea a agregar");
+                }
+        }
+        else {
+            printf("\nNo existe una linea con ese codigo ");
+        }
+    }
+    else {
+        printf("\nNo se han ingresado todas las ciudades todavia, ingrese todas primero ");
+    }
 
 }
 
@@ -234,11 +273,11 @@ int main()
             break;
         }
         case 6:
-        {
+        {   Opcion6(lineas);
             break;
         }
         case 7:
-        {
+        {   Opcion7(lineas, ciudades);
             break;
         }
         case 8:
