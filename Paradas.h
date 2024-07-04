@@ -11,6 +11,8 @@ typedef struct { Nodo * prim;
                 } Paradas;
 
 
+ /*Primitvas*/
+
  void Make (Paradas &L);
 
  void Insback (Paradas &L, String e);
@@ -22,6 +24,8 @@ typedef struct { Nodo * prim;
  void RemFront (Paradas &L);
 
  void Desplegar(Paradas L);
+
+ /*Verificar todas las primitivas de la secuenciaP*/
 
 
 #endif // PARADAS_H_INCLUDED

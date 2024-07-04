@@ -14,4 +14,8 @@ int darCantidadParadas (Linea l);
 
 Paradas darParadas (Linea l);
 
+void cargarLinea (Linea &l);
+
+void desplegarLinea (Linea l);
+
 #endif // LINEA_H_INCLUDED

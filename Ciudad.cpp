@@ -1,32 +1,21 @@
 #include "Ciudad.h"
 
-int darNumeroCiudad (Ciudad c) {
-return c.NumeroCiudad;
+Ciudad crearCiudad(int nroCiud, String Nombre)
+{
+    Ciudad c;
+    c.NumeroCiudad = nroCiud;
+    c.NombreCiudad = Nombre;
 
+    return c;
 }
 
-String darNombreCiudad (Ciudad c) {
-return c.NombreCiudad;
 
+int darNumeroCiudad (Ciudad c)
+{
+    return c.NumeroCiudad;
 }
 
-void cargarCiudad (Ciudad &c) {
-printf("\nIngrese nombre de ciudad: ");
-strcrear(c.NombreCiudad);
-scan(c.NombreCiudad);
-
-}
-
-void cargarNumeroCiudad (Ciudad &c, int numero) {
-c.NumeroCiudad = numero;
-
-}
-
-void desplegarCiudad (Ciudad c) {
-printf("\n");
-print(c.NombreCiudad);
-printf(" - ");
-printf("%d", c.NumeroCiudad);
-
-
+String darNombreCiudad (Ciudad c)
+{
+    return c.NombreCiudad;
 }

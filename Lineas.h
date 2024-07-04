@@ -10,8 +10,6 @@ typedef struct nodoA {
                         } nodo;
 
 typedef nodo *Lineas;
-
-
 // Operaciones primitivas
 
 //Crea un diccionario vacío.
@@ -31,7 +29,6 @@ boolean Member (Lineas a, Linea valor);
 //Precondición: el elemento es miembro del diccionario.
 Linea Find (Lineas a, Linea valor);
 
-/// ME FALTA LA COMPARATIVA DE SI ES MENOR UN STRING QUE OTRO
 // Sustituye el viejo elemento de tipo T en el diccionario por el nuevo elemento.
 //Precondición: el elemento a sustituir es miembro del diccionario.
 void Modify (Lineas &a, Linea viejo, Linea nuevo);

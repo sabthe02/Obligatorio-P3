@@ -1,93 +1,137 @@
 #include "Grafo.h"
 
-void Crear (Grafo &g) {
+
+void Crear (Grafo &g)
+{
     int i, j;
 
-    for (i = 0; i <CANT_CIUD; i++) {
-        for (j = 0; j <CANT_CIUD; j++) {
+    for (i = 0; i <CANT_CIUDADES; i++)
+    {
+        for (j = 0; j <CANT_CIUDADES; j++)
+        {
             g[i][j] = 0;
         }
     }
 
 }
 
-void InsertarVertice (Grafo &g, int i, int j){
-//Para mí no es por acá, esto es agregar una arista, el vértice es i o j.
+void agregarAristaNoDirigido (Grafo &g, int fila, int columna)
+{
 
-g[i][j] = 1;
-g[j][i] = 1;
+    g[fila][columna] = 1;
+    g[columna][fila] = 1;
+}
+void InsertarVertice (Grafo &g, int vertice)
+{
+
 
 
 }
 
-void InsertarArista (Grafo &g, int fila, int columna) {
+void InsertarArista (Grafo &g, int fila, int columna)
+{
 
-g[fila][columna]=1;
-    if (fila != columna) {
+    g[fila][columna]=1;
+    if (fila != columna)
+    {
         g[columna][fila]=1;
     }
 
 }
 
-boolean PerteneceVertice(Grafo g, int vertice) {
-boolean pertenece = FALSE;
-int i=0, j;
+boolean PerteneceVertice(Grafo g, int vertice)
+{
+    boolean pertenece = FALSE;
+    int i=0, j;
 
-do  {
-    j=0;
-    do {
-        if (i == vertice || j == vertice) {
-            pertenece = TRUE;
-        }
-        else {
-            j++;
-        }
+    do
+    {
+        j=0;
+        do
+        {
+            if (i == vertice || j == vertice)
+            {
+                pertenece = TRUE;
+            }
+            else
+            {
+                j++;
+            }
 
-        }while (j <CANT_CIUD && !pertenece);
+        }
+        while (j <CANT_CIUDADES && !pertenece);
         i++;
-    }while (i <CANT_CIUD && !pertenece);
-return pertenece;
+    }
+    while (i <CANT_CIUDADES && !pertenece);
+    return pertenece;
 }
 
-boolean PerteneceArista(Grafo g, int fila, int columna) {
-boolean pertenece = FALSE;
+boolean PerteneceArista(Grafo g, int fila, int columna)
+{
+    boolean pertenece = FALSE;
 
-if (g[fila][columna] == 1){
-    pertenece = TRUE;
+    if (g[fila][columna] == 1)
+    {
+        pertenece = TRUE;
+    }
+    return pertenece;
+
 }
-return pertenece;
 
-}
+int GradoVertice (Grafo g, int vertice)
+{
 
-int GradoVertice (Grafo g, int vertice) {
+    int cont = 0;
 
-int cont = 0;
-
-for (int j=0; j<CANT_CIUD ;j++) {
-        if (g[vertice][j]==1) {
-                cont++;
+    for (int j=0; j<CANT_CIUDADES ; j++)
+    {
+        if (g[vertice][j]==1)
+        {
+            cont++;
         }
-}
-    if (g[vertice][vertice]==1) {
+    }
+    if (g[vertice][vertice]==1)
+    {
         cont++;
     }
-return cont;
+    return cont;
 
 }
 
-void DFS (Grafo g, int actual, boolean visitado[CANT_CIUD]) {
-int j;
+boolean buscarRuta (Grafo g, int verticeA, int verticeB)
+{
+    boolean visitados[CANT_CIUDADES];
 
-visitado[actual] = TRUE;
+    for(int i = 0; i<CANT_CIUDADES; i++)
+    {
+        visitados[i] = FALSE;
+    }
 
-for (j = 0; j<CANT_CIUD; j++) {
+    DFS(g, verticeA, verticeB, visitados);
 
-    if (g[actual][j] == 1) {
-        if (!visitado[j]) {
-            DFS (g, j, visitado);
+    return visitados[verticeB];
+}
+
+void DFS (Grafo g, int actual, int verticeBuscar, boolean visitado[CANT_CIUDADES])
+{
+    int j;
+
+    visitado[actual] = TRUE;
+
+    if(actual!=verticeBuscar)
+    {
+        for (j = 0; j<CANT_CIUDADES; j++)
+        {
+
+            if (g[actual][j] == 1)
+            {
+                if (!visitado[j])
+                {
+                    DFS (g, j, verticeBuscar, visitado);
+                }
+            }
         }
     }
-}
 
 }
 

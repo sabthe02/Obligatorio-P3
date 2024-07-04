@@ -52,3 +52,56 @@
 1720037842 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.cpp
 	"String.h"
 
+1694133844 source:c:\users\sabth\onedrive\desktop\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1694133845 c:\users\sabth\onedrive\desktop\obligatorio\boolean.h
+	<stdio.h>
+
+1720046925 source:c:\users\sabth\onedrive\desktop\obligatorio\ciudad.cpp
+	"Ciudad.h"
+
+1720046603 c:\users\sabth\onedrive\desktop\obligatorio\ciudad.h
+	"String.h"
+
+1720037863 c:\users\sabth\onedrive\desktop\obligatorio\string.h
+	"Boolean.h"
+
+1720044237 source:c:\users\sabth\onedrive\desktop\obligatorio\ciudades.cpp
+	"Ciudades.h"
+
+1720046251 c:\users\sabth\onedrive\desktop\obligatorio\ciudades.h
+	"Ciudad.h"
+
+1720037193 source:c:\users\sabth\onedrive\desktop\obligatorio\grafo.cpp
+	"Grafo.h"
+
+1720037201 c:\users\sabth\onedrive\desktop\obligatorio\grafo.h
+	"Boolean.h"
+
+1720001967 source:c:\users\sabth\onedrive\desktop\obligatorio\linea.cpp
+	"Linea.h"
+
+1720001541 c:\users\sabth\onedrive\desktop\obligatorio\linea.h
+	"Paradas.h"
+
+1720004066 c:\users\sabth\onedrive\desktop\obligatorio\paradas.h
+	"String.h"
+
+1720037955 source:c:\users\sabth\onedrive\desktop\obligatorio\lineas.cpp
+	"Lineas.h"
+
+1720087416 c:\users\sabth\onedrive\desktop\obligatorio\lineas.h
+	"Boolean.h"
+	"Linea.h"
+
+1720047310 source:c:\users\sabth\onedrive\desktop\obligatorio\main.cpp
+	<stdio.h>
+	"Ciudades.h"
+
+1720004061 source:c:\users\sabth\onedrive\desktop\obligatorio\paradas.cpp
+	"Paradas.h"
+
+1720037842 source:c:\users\sabth\onedrive\desktop\obligatorio\string.cpp
+	"String.h"
+

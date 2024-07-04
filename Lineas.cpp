@@ -1,5 +1,6 @@
 #include "Lineas.h"
 
+
 void Make (Lineas &a) {
 
 a = NULL;
@@ -28,7 +29,7 @@ if (a == NULL) {
     a->hder = NULL;
     }
     else {
-        if (darCodigoLinea(valor) < darCodigoLinea(a->info)) {
+        if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info))) {
             Insert (a->hizq, valor);
         }
         else {
@@ -42,13 +43,14 @@ if (a == NULL) {
 boolean Member (Lineas a, Linea valor) {
 if (a == NULL) {
     return FALSE;
+
 }
 else {
-    if (darCodigoLinea(valor) == darCodigoLinea(a->info)) {
+    if (streq(darCodigoLinea(valor),darCodigoLinea(a->info))==TRUE) {
         return TRUE;
     }
     else {
-            if (darCodigoLinea(valor) < darCodigoLinea(a->info)) {
+            if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info))==TRUE) {
                 return Member (a->hizq, valor);
             }
             else {
@@ -64,11 +66,11 @@ else {
 Linea Find (Lineas a, Linea valor) {
 
     if (a!=NULL){
-        if (darCodigoLinea(a->info)==darCodigoLinea(valor)) {
+        if (streq(darCodigoLinea(a->info),darCodigoLinea(valor))==TRUE) {
             return a->info;
         }
         else {
-                if (darCodigoLinea(valor) < darCodigoLinea(a->info)) {
+                if (strmen(darCodigoLinea(valor), darCodigoLinea(a->info))==TRUE) {
                     return Find(a->hizq, valor);
             }
             else {
@@ -85,7 +87,7 @@ void Modify (Lineas &a, Linea viejo, Linea nuevo) {
             a->info = nuevo;
         }
         else {
-                if (strmen(darCodigoLinea(viejo),darCodigoLinea(a->info))) {
+                if (strmen(darCodigoLinea(viejo),darCodigoLinea(a->info))==TRUE) {
                     Modify(a->hizq, viejo, nuevo);
             }
             else {
@@ -119,7 +121,7 @@ if (streq(darCodigoLinea(a->info),darCodigoLinea(valor))== TRUE) {
         }
 }
 else {
-    if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info))) {
+    if (strmen(darCodigoLinea(valor),darCodigoLinea(a->info))==TRUE) {
         Delete (a -> hizq, valor);
     }
         else {
