@@ -9,11 +9,13 @@ typedef struct{
             }Ciudad;
 
 
-
+// Crear una nueva ciudad
 Ciudad crearCiudad(int nroCiud, String Nombre);
 
+//Desplegar Nombre Ciudad
 void mostrarNombreCiudad(Ciudad c);
 
+//Eliminar String de NombreCiudad
 void borrarCiudad(Ciudad &c);
 
 /*Selectoras*/

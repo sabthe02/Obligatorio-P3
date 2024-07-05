@@ -56,7 +56,7 @@ boolean Existe(Ciudades ad, String s)
 
     while(encontre == FALSE && i<ad.tope)
     {
-        if(CompararStrings(darNombreCiudad(ad.arre[i]), s) == TRUE)
+        if(streq(darNombreCiudad(ad.arre[i]), s) == TRUE)
         {
                 encontre = TRUE;
         }

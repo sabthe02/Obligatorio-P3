@@ -12,24 +12,25 @@ typedef int Grafo[CANT_CIUDADES][CANT_CIUDADES];
 /*Operaciones Primitivas*/
 void Crear (Grafo &g);
 
-
-//Crear:   Grafo Crea un grafo vacío.
+//Crea un grafo vacío.
 void Crear (Grafo &g);
 
-//InsertarArista : Grafo x A  Grafo Inserta la nueva arista al grafo. Precondición: la arista no pertenece al grafo.
+//Grafo Inserta la nueva arista al grafo. Precondición: la arista no pertenece al grafo.
 void InsertarArista (Grafo &g, int fila, int columna);
 
-//PerteneceVertice : Grafo x V  Boolean Determina si en el grafo existe el vértice especificado.
+//Determina si en el grafo existe el vértice especificado.
 boolean PerteneceVertice(Grafo g, int vertice);
 
-//PerteneceArista : Grafo x A  Boolean Determina si en el grafo existe la arista especificada.
+//Determina si en el grafo existe la arista especificada.
 boolean PerteneceArista(Grafo g, int fila, int columna);
 
-//GradoVertice : Grafo x V  Entero Devuelve el grado del vértice especificado. Precondición: el vértice pertenece al grafo
+//Devuelve el grado del vértice especificado. Precondición: el vértice pertenece al grafo
 int GradoVertice (Grafo g, int vertice);
 
+//Determina si existe una ruta entre dos ciudades.
 boolean buscarRuta (Grafo g, int verticeA, int verticeB);
 
+//DFS
 void DFS (Grafo g, int actual, int verticeBuscar, boolean visitado[CANT_CIUDADES]);
 
 

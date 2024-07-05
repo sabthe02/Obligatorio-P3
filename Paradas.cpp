@@ -58,16 +58,6 @@ Ciudad Back (Paradas L)
 
 }
 
-void Desplegar(Paradas L)
-{
-    while (L.prim!=NULL)
-    {
-        print(darNombreCiudad(L.prim->info));
-        printf(" - ");
-        L.prim = L.prim->sig;
-    }
-
-}
 
 
 void imprimirParadasP (Paradas p)
@@ -75,7 +65,7 @@ void imprimirParadasP (Paradas p)
     while(p.prim != NULL)
     {
         mostrarNombreCiudad(p.prim->info);
-        p.prim = p.prim->sig;
+        RemFront(p);
     }
 }
 

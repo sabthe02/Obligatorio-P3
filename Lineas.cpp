@@ -253,7 +253,6 @@ void Eliminar(Lineas &a)
         Eliminar (a -> hizq);
         Eliminar (a -> hder);
 
-
         Eliminar(a->info);
         delete a;
 

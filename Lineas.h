@@ -1,6 +1,5 @@
 #ifndef LINEAS_H_INCLUDED
 #define LINEAS_H_INCLUDED
-#include "Boolean.h"
 #include "Linea.h"
 
 typedef struct nodoA {
@@ -37,20 +36,26 @@ void Modify (Lineas &a, Linea viejo, Linea nuevo);
 //Precondición: el elemento es miembro del diccionario.
 void Delete (Lineas &a, Linea valor);
 
-//Auxiliares para el Delete
+/*Auxiliares para el Delete*/
 void Borrar_Minimo (Lineas &a);
 
+//Devuelve el mínimo del ABB
 Linea Minimo (Lineas a);
 
-//Desplegar todas las lineas, ordenadas de menor a mayot
+//Desplegar todas las lineas, ordenadas de menor a mayor
 void DesplegarLineas (Lineas a);
 
+//Agregar una parada a una líne dentro dal ABB
 void agregarParadaALineas (Lineas &a, String codigo, Ciudad c);
 
+//Desplegar el recorrido de una linea con su código
+//Precondición: La línea correspondiente al código existe en el ABB
 void imprimirRecorrido(Lineas l, String codigoLinea);
 
+//Determina si la línea correspondiente al código de línea tiene alguna parada cargada en secuencia paradas
 boolean lineaTieneParadas(Lineas l, String codigoLinea);
 
+// Liberar memoria del ABB y dejarlo vacío
 void Eliminar(Lineas &a);
 
 #endif // LINEAS_H_INCLUDED

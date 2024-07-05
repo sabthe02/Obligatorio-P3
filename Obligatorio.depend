@@ -1,63 +1,59 @@
 # depslib dependency file v1.0
-1720086247 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\boolean.cpp
+1720135090 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\boolean.cpp
 	"Boolean.h"
 
-1720086247 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\boolean.h
+1720135090 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\boolean.h
 	<stdio.h>
 
-1720086247 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.cpp
+1720135090 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.cpp
 	"Ciudad.h"
 
-1720087416 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.h
+1720179729 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.h
 	"String.h"
 
-1720088875 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.h
+1720135090 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.h
 	"Boolean.h"
 
-1720114284 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.cpp
+1720135090 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.cpp
 	"Linea.h"
 
-1720124387 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\main.cpp
+1720185335 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\main.cpp
 	<stdio.h>
 	"Ciudades.h"
 	"Grafo.h"
 	"Lineas.h"
 
-1720086247 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudades.cpp
+1720178079 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudades.cpp
 	"Ciudades.h"
 
-1720089127 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudades.h
+1720186460 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudades.h
 	"Ciudad.h"
-	"Boolean.h"
-	"String.h"
 	"constantes.h"
 
-1720086247 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\grafo.cpp
+1720135090 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\grafo.cpp
 	"Grafo.h"
 
-1720112736 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\grafo.h
+1720180194 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\grafo.h
 	"Boolean.h"
 	"constantes.h"
 
-1720125750 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.cpp
+1720185563 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.cpp
 	"Lineas.h"
 
-1720125441 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.h
-	"Boolean.h"
+1720186723 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.h
 	"Linea.h"
 
-1720114131 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.h
+1720180746 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.h
 	"Paradas.h"
 	"Ciudad.h"
 
-1720123752 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.h
-	"String.h"
+1720186805 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.h
 	"Ciudad.h"
 
-1720124431 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.cpp
+1720183243 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.cpp
 	"Paradas.h"
 
-1720088839 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.cpp
+1720135090 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.cpp
 	"String.h"
 
 1694133844 source:c:\users\sabth\onedrive\desktop\obligatorio\boolean.cpp
@@ -113,5 +109,5 @@
 1720037842 source:c:\users\sabth\onedrive\desktop\obligatorio\string.cpp
 	"String.h"
 
-1720086247 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\constantes.h
+1720135090 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\constantes.h
 

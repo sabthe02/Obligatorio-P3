@@ -1,6 +1,5 @@
 #ifndef PARADAS_H_INCLUDED
 #define PARADAS_H_INCLUDED
-#include "String.h"
 #include "Ciudad.h"
 
 typedef struct nodoL
@@ -17,28 +16,30 @@ typedef struct
 
 
 /*Primitvas*/
-
+//Crear un Deque
 void Make (Paradas &L);
 
+//Insertar un elemento al final
 void Insback (Paradas &L, Ciudad e);
 
+//Determinar si el Deque está vacío
 boolean Empty (Paradas L);
 
+//Obtener el primer elemento al Deque
 Ciudad Front (Paradas L);
 
+//Devuelve el Deque sin su primer elemento
 void RemFront (Paradas &L);
 
 //Devuelve el último elemento del deque
 // Precondición: el deque no está vacío
 Ciudad Back (Paradas L);
 
-void Desplegar(Paradas L);
-
+//Desplegar todos los elementosdel Deque
 void imprimirParadasP (Paradas p);
 
+//Liberar la memoria del Deque y dejarlo vacío
 void Eliminar(Paradas &p);
-
-/*Verificar todas las primitivas de la secuenciaP*/
 
 
 #endif // PARADAS_H_INCLUDED

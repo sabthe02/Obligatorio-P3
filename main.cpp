@@ -107,7 +107,7 @@ void Opcion3(Ciudades c, Grafo &graf)
             }
             else
             {
-                printf("El codigo de la ciudad ingresada no es valida.\n");
+                printf("El codigo de la ciudad ingresada no es valido.\n");
             }
         }
         else
@@ -117,7 +117,7 @@ void Opcion3(Ciudades c, Grafo &graf)
     }
     else
     {
-        printf("El codigo de la ciudad ingresada no es valida.\n");
+        printf("El codigo de la ciudad ingresada no es valido.\n");
     }
 }
 
@@ -211,7 +211,7 @@ void Opcion6 (Lineas lineas)
 
 void Opcion7 (Lineas &lineas, Ciudades ciudades, Grafo grafo)
 {
-
+    boolean agregar;
     String num;
     int codigo;
     strcrear(num);
@@ -228,36 +228,48 @@ void Opcion7 (Lineas &lineas, Ciudades ciudades, Grafo grafo)
         {
             printf("\nIngrese numero de ciudad para agregar una parada en esa ciudad: ");
             scanf("%d", &codigo);
+            if (Existe(ciudades,darNombreCiudad((Kesimo(ciudades, codigo))))==TRUE){
 
             ///Falta agregar la condicion que la ciudad exista en el arreglo con tope
+            ///(Sabine) Fijate si está bien así
 
-            boolean agregar = TRUE;
+             agregar = TRUE;
+
             ///Antes de buscar una conexion entre la linea y el codigo de ciudad a agregar, se tiene que verificar si es la primer parada que hacemos
+            ///(Sabine) Fijate si está bien así
+                if (Empty(darParadas(Find(lineas,num))) ==FALSE) {
+                    if(lineaTieneParadas(lineas, num) == TRUE)
+                    {
+                        if (buscarRuta(grafo, codigo, darNumeroCiudad(Back(darParadas(Find(lineas,num))))) == FALSE)
+                        {
 
-            if(lineaTieneParadas(lineas, num) == TRUE)
-            {
-                if (buscarRuta(grafo, codigo, darNumeroCiudad(Back(darParadas(Find(lineas,num))))) == FALSE)
+                            agregar = FALSE;
+                            printf("\nNo existe ruta entre la ciudad y el destino de la linea a agregar\n");
+                        }
+                    }
+                }
+                else {
+                    agregar = TRUE;
+                }
+                if(agregar == TRUE)
                 {
-
-                    agregar = FALSE;
-                    printf("\nNo existe ruta entre la ciudad y el destino de la linea a agregar");
+                    agregarParadaALineas(lineas,num,Kesimo(ciudades,codigo));
+                    printf("Se agrego la parada indicada.\n");
                 }
             }
-
-            if(agregar == TRUE)
-            {
-                agregarParadaALineas(lineas,num,Kesimo(ciudades,codigo));
-                printf("Se agrego la parada indicada.");
+            else {
+                printf("\nNoExiste la ciudad ingresada en el registro de ciudades\n");
             }
+
         }
         else
         {
-            printf("\nNo existe una linea con ese codigo ");
+            printf("\nNo existe una linea con ese codigo\n");
         }
     }
     else
     {
-        printf("\nNo se han ingresado todas las ciudades todavia, ingrese todas primero ");
+        printf("\nNo se han ingresado todas las ciudades todavia, ingrese todas primero\n");
     }
 
 }
@@ -275,7 +287,7 @@ void Opcion8(Lineas lineas)
         imprimirRecorrido(lineas, codigoLinea);
     }else
     {
-         printf("El codigo de linea ingresado no existe. ");
+         printf("El codigo de linea ingresado no existe. \n");
     }
 }
 
@@ -341,6 +353,8 @@ int main()
         }
         case 0:
             {
+                Eliminar(lineas);
+                printf("\nSaliendo...");
                 break;
             }
         default:
