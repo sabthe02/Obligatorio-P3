@@ -23,8 +23,7 @@ void imprimirMenu()
 
 void Opcion1(Ciudades &ciud)
 {
-    ///Se corrigio estaba definido una variable local de tipo Ciudades
-    ///Se controla primero que tengamos lugares libres antes de preguntar el nombre de la ciudad
+
     if(EstaLlena(ciud) == FALSE)
     {
         String nomAux;
@@ -62,119 +61,144 @@ void Opcion3(Ciudades c, Grafo &graf)
 {
 
     int ciudad1, ciudad2;
+    char t, t2;
 
     printf("Ingrese el codigo de la ciudad 1: ");
-    scanf("%d", &ciudad1);
-
-    if(ciudad1>=0)
+    if ((scanf("%d%c", &ciudad1, &t) ==2) && (t='\n'))
     {
 
-        if(ciudad1<Largo(c))
+        if(ciudad1>=0)
         {
-            printf("Ingrese el codigo de la ciudad 2: ");
-            scanf("%d", &ciudad2);
 
-            if(ciudad2>=0)
+            if(ciudad1<Largo(c))
             {
-
-                if(ciudad2<Largo(c))
+                printf("Ingrese el codigo de la ciudad 2: ");
+                if ((scanf("%d%c", &ciudad2, &t2) ==2) && (t2='\n'))
                 {
 
-                    if(ciudad1 != ciudad2)
+                    if(ciudad2>=0)
                     {
-                        if(PerteneceArista(graf, ciudad1, ciudad2) == FALSE)
+
+                        if(ciudad2<Largo(c))
                         {
-                            InsertarArista(graf, ciudad1,ciudad2);
-                            printf("Se creo el tramo correctamente.\n");
+
+                            if(ciudad1 != ciudad2)
+                            {
+                                if(PerteneceArista(graf, ciudad1, ciudad2) == FALSE)
+                                {
+                                    InsertarArista(graf, ciudad1,ciudad2);
+                                    printf("Se creo el tramo correctamente.\n\n");
+                                }
+                                else
+                                {
+                                    printf("Ya existe una ruta que une las ciudades. \n\n");
+                                }
+
+                            }
+                            else
+                            {
+                                printf("Las ciudades no pueden ser iguales.\n\n");
+                            }
+
+
                         }
                         else
                         {
-                            printf("Ya existe una ruta que une las ciudades. \n");
+                            printf("El codigo de la ciudad 2 ingresado excede las ciudades registradas (no hay ciudad con ese codigo).\n\n");
                         }
-
                     }
                     else
                     {
-                        printf("Las ciudades no pueden ser iguales.\n");
+                        printf("El codigo de la ciudad 2 ingresado no es valido (numero menor a 0).\n\n");
                     }
-
-
                 }
                 else
                 {
-                    printf("El codigo de la ciudad ingresado excede las ciudades registradas.\n");
+                    printf("\nEl codigo de la ciudad 2 debe ser un numero entero seguido de enter. \n\n");
                 }
             }
             else
             {
-                printf("El codigo de la ciudad ingresada no es valido.\n");
+                printf("El codigo de la ciudad 1 ingresada excede las ciudades registradas (no hay ciudad con ese codigo).\n\n");
             }
         }
         else
         {
-            printf("El codigo de la ciudad ingresado excede las ciudades registradas.\n");
+            printf("El codigo de la ciudad 1 ingresada no es valido (numero menor a 0).\n\n");
         }
     }
     else
-    {
-        printf("El codigo de la ciudad ingresada no es valido.\n");
-    }
+        {
+        printf("\nEl codigo de la ciudad 1 debe ser un numero entero seguido de enter. \n\n");
+        }
+
 }
 
 void Opcion4(Ciudades c, Grafo graf)
 {
     int ciudad1, ciudad2;
+    char t3, t4;
 
     printf("Ingrese el codigo de la ciudad 1: ");
-    scanf("%d", &ciudad1);
+    if (scanf("%d%c", &ciudad1, &t3) ==2 && (t3=='\n')) {
 
-    if(ciudad1>=0)
-    {
-
-        if(ciudad1<Largo(c))
+        if(ciudad1>=0)
         {
-            printf("Ingrese el codigo de la ciudad 2: ");
-            scanf("%d", &ciudad2);
 
-            if(ciudad2>=0)
+            if(ciudad1<Largo(c))
             {
+                printf("Ingrese el codigo de la ciudad 2: ");
+                if (scanf("%d%c", &ciudad2, &t4)==2 && (t4=='\n')) {
 
-                if(ciudad2<Largo(c))
-                {
-                    if(ciudad1 != ciudad2)
+                    if(ciudad2>=0)
                     {
-                        if(buscarRuta(graf, ciudad1, ciudad2) == TRUE)
+
+                        if(ciudad2<Largo(c))
                         {
-                            printf("Existe un tramo entre las ciudades.\n");
+                            if(ciudad1 != ciudad2)
+                            {
+                                if(buscarRuta(graf, ciudad1, ciudad2) == TRUE)
+                                {
+                                    printf("Existe un tramo entre las ciudades.\n\n");
+                                }
+                                else
+                                {
+                                    printf("No existe un tramo entre las ciudades.\n\n");
+                                }
+                            }
+                            else
+                            {
+                                printf("Las ciudades no pueden ser iguales.\n\n");
+                            }
                         }
                         else
                         {
-                            printf("No existe un tramo entre las ciudades.\n");
+                            printf("El codigo de la ciudad 2 ingresada excede las ciudades registradas (no hay ciudad con ese codigo).\n\n");
                         }
                     }
                     else
                     {
-                        printf("Las ciudades no pueden ser iguales.\n");
+                        printf("El codigo de la ciudad 2 ingresada no es valido (menor a 0).\n\n");
                     }
                 }
                 else
                 {
-                    printf("El codigo de la ciudad ingresado excede las ciudades registradas.\n");
+                    printf("\nEl codigo de la ciudad 2 debe ser un numero entero seguido de enter. \n\n");
                 }
             }
             else
             {
-                printf("El codigo de la ciudad ingresada no es valida.\n");
+                printf("El codigo de la ciudad 1 ingresada excede las ciudades registradas (no hay ciudad con ese codigo).\n\n");
             }
         }
         else
         {
-            printf("El codigo de la ciudad ingresado excede las ciudades registradas.\n");
+            printf("El codigo de la ciudad 1 ingresada no es valido (menor a 0).\n\n");
         }
     }
     else
     {
-        printf("El codigo de la ciudad ingresada no es valida.\n");
+        printf("\nEl codigo de la ciudad 1 debe ser un numero entero seguido de enter. \n\n");
     }
 }
 
@@ -183,14 +207,15 @@ void Opcion5(Lineas &lineas)
     Linea aux;
     cargarLinea(aux);
 
-    if (!Member(lineas, darCodigoLinea(aux)))
+    if (Member(lineas, darCodigoLinea(aux)) == FALSE)
     {
         Insert(lineas,aux);
-        printf("\nLinea agregada con exito\n");
+        printf("\nLinea agregada con exito\n\n");
     }
     else
     {
-        printf("\nYa existe una linea con el mismo codigo");
+        Eliminar(aux);
+        printf("\nYa existe una linea con el mismo codigo\n\n");
     }
 
 
@@ -202,92 +227,112 @@ void Opcion6 (Lineas lineas)
     if (!Vacio(lineas))
     {
         DesplegarLineas(lineas);
+        printf("\n");
     }
     else
     {
-        printf("\nNo hay lineas registradas");
+        printf("\nNo hay lineas registradas, por favor ingresar primero\n\n");
     }
 }
 
 void Opcion7 (Lineas &lineas, Ciudades ciudades, Grafo grafo)
 {
-    boolean agregar;
-    String num;
-    int codigo;
-    strcrear(num);
+    if (Vacio(lineas) ==FALSE){
+        boolean agregar;
+        String num;
+        int codigo;
+        char te;
+        strcrear(num);
 
-    if (EstaLlena(ciudades)==TRUE)
-    {
-
-        printf("\nIngrese un codigo de linea para agregar una parada a su recorrido: ");
-        scan(num);
-
-
-
-        if (Member(lineas,num) == TRUE)
+        if (EstaLlena(ciudades)==TRUE)
         {
-            printf("\nIngrese numero de ciudad para agregar una parada en esa ciudad: ");
-            scanf("%d", &codigo);
-            if (Existe(ciudades,darNombreCiudad((Kesimo(ciudades, codigo))))==TRUE){
 
-            ///Falta agregar la condicion que la ciudad exista en el arreglo con tope
-            ///(Sabine) Fijate si está bien así
+            printf("\nIngrese un codigo de linea para agregar una parada a su recorrido: ");
+            scan(num);
 
-             agregar = TRUE;
 
-            ///Antes de buscar una conexion entre la linea y el codigo de ciudad a agregar, se tiene que verificar si es la primer parada que hacemos
-            ///(Sabine) Fijate si está bien así
-                if (Empty(darParadas(Find(lineas,num))) ==FALSE) {
-                    if(lineaTieneParadas(lineas, num) == TRUE)
+
+            if (Member(lineas,num) == TRUE)
+            {
+                printf("\nIngrese numero de ciudad para agregar una parada en esa ciudad: ");
+                if (scanf("%d%c", &codigo, &te)==2 && (te=='\n')){
+
+                    if(codigo >=0 && Largo(ciudades) > codigo)
                     {
-                        if (buscarRuta(grafo, codigo, darNumeroCiudad(Back(darParadas(Find(lineas,num))))) == FALSE)
+
+                        agregar = TRUE;
+
+                        if (Empty(darParadas(Find(lineas,num))) == FALSE)
                         {
 
-                            agregar = FALSE;
-                            printf("\nNo existe ruta entre la ciudad y el destino de la linea a agregar\n");
+                                if (buscarRuta(grafo, codigo, darNumeroCiudad(Back(darParadas(Find(lineas,num))))) == FALSE)
+                                {
+
+                                    agregar = FALSE;
+                                    printf("\nNo existe ruta entre la ciudad y el destino de la linea a agregar\n\n");
+                                }
+
+                        }
+                        else
+                        {
+                            agregar = TRUE;
+                        }
+                        if(agregar == TRUE)
+                        {
+                            agregarParadaALineas(lineas,num,Kesimo(ciudades,codigo));
+                            printf("Se agrego la parada indicada.\n\n");
                         }
                     }
+                    else
+                    {
+                        printf("\nNo existe la ciudad ingresada en el registro de ciudades\n\n");
+                    }
                 }
-                else {
-                    agregar = TRUE;
-                }
-                if(agregar == TRUE)
+                else
                 {
-                    agregarParadaALineas(lineas,num,Kesimo(ciudades,codigo));
-                    printf("Se agrego la parada indicada.\n");
+                    printf("\nEl codigo de la ciudad debe ser un numero entero seguido de enter. \n\n");
                 }
-            }
-            else {
-                printf("\nNoExiste la ciudad ingresada en el registro de ciudades\n");
-            }
 
+            }
+            else
+            {
+                printf("\nNo existe una linea con ese codigo\n\n");
+            }
         }
         else
         {
-            printf("\nNo existe una linea con ese codigo\n");
+            printf("\nNo se han ingresado todas las ciudades todavia, ingrese todas primero\n\n");
         }
     }
     else
     {
-        printf("\nNo se han ingresado todas las ciudades todavia, ingrese todas primero\n");
+        printf("\nNo hay lineas ingresadas todavia, por favor ingresar primero\n\n");
     }
 
 }
 
 void Opcion8(Lineas lineas)
 {
-    String codigoLinea;
-    strcrear(codigoLinea);
-
-    printf("Ingrese el codigo de la linea: ");
-    scan(codigoLinea);
-
-    if(Member(lineas, codigoLinea) == TRUE)
+    if (Vacio(lineas)== FALSE)
     {
-        imprimirRecorrido(lineas, codigoLinea);
-    }else
+        String codigoLinea;
+        strcrear(codigoLinea);
+
+        printf("Ingrese el codigo de la linea: ");
+        scan(codigoLinea);
+
+        if(Member(lineas, codigoLinea) == TRUE)
+        {
+            imprimirRecorrido(lineas, codigoLinea);
+        }
+        else
+        {
+            printf("El codigo de linea ingresado no existe. \n\n");
+        }
+    }
+    else
     {
-         printf("El codigo de linea ingresado no existe. \n");
+        printf("\nNo hay lineas ingresadas todavia, por favor ingresar primero\n\n");
     }
 }
 
@@ -298,75 +343,86 @@ int main()
 
     Grafo grafo;
     Crear(grafo);
+
     Lineas lineas;
     Make(lineas);
 
 
     int opcion;
+    char term;
+    boolean error;
     do
     {
         imprimirMenu();
         fflush(stdin);
-        scanf("%d", &opcion);
-
-        switch(opcion)
+        if (scanf("%d%c", &opcion, &term) == 2 && term == '\n')
         {
-        case 1:
-        {
-            Opcion1(ciudades);
-            break;
-        }
-        case 2:
-        {
-            Opcion2(ciudades);
-            break;
-        }
-        case 3:
-        {
-            Opcion3(ciudades, grafo);
-            break;
-        }
-        case 4:
-        {
-            Opcion4(ciudades, grafo);
-            break;
-        }
-        case 5:
-        {
-            Opcion5(lineas);
-            break;
-        }
-        case 6:
-        {
-            Opcion6(lineas);
-            break;
-        }
-        case 7:
-        {
-            Opcion7(lineas, ciudades, grafo);
-            break;
-        }
-        case 8:
-        {
-            Opcion8(lineas);
-            break;
-        }
-        case 0:
+            error = FALSE;
+            switch(opcion)
             {
-                Eliminar(lineas);
+            case 1:
+            {
+                Opcion1(ciudades);
+                break;
+            }
+            case 2:
+            {
+                Opcion2(ciudades);
+                break;
+            }
+            case 3:
+            {
+                Opcion3(ciudades, grafo);
+                break;
+            }
+            case 4:
+            {
+                Opcion4(ciudades, grafo);
+                break;
+            }
+            case 5:
+            {
+                Opcion5(lineas);
+                break;
+            }
+            case 6:
+            {
+                Opcion6(lineas);
+                break;
+            }
+            case 7:
+            {
+                Opcion7(lineas, ciudades, grafo);
+                break;
+            }
+            case 8:
+            {
+                Opcion8(lineas);
+                break;
+            }
+            case 0:
+            {
+
                 printf("\nSaliendo...");
                 break;
             }
-        default:
+            default:
+            {
+                printf("La opcion ingresada no es correcta. \n\n");
+                break;
+            }
+            }
+        }
+        else
         {
-            printf("La opcion ingresada no es correcta. \n\n");
+            printf("Por favor ingrese un numero entero segun el menu, seguido de enter\n\n");
+            error = TRUE;
         }
-        }
+    } while(opcion != 0 || (error ==TRUE));
 
-    }
-    while(opcion != 0);
-
+    Eliminar(ciudades);
     Eliminar(lineas);
+
 
 
     return 0;

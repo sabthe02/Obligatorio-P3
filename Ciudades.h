@@ -47,5 +47,8 @@ void InsBack (Ciudades &ad, String elemento);
 //Listar número y nombre de cada una de las ciudades registradas hasta el momento en el sistema, ordenadas por número de ciudad de menor a mayor.
 void Listar(Ciudades ad);
 
+//
+void Eliminar(Ciudades &c);
+
 
 #endif // ARREGLOCONTOPE_H_INCLUDED

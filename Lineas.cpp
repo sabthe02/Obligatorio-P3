@@ -204,7 +204,6 @@ void DesplegarLineas (Lineas a)
 
 void agregarParadaALineas (Lineas &a, String codigo, Ciudad c)
 {
-    ///Hay que buscar en una recorrida recursiva el elemento para modificarlo.
     if (a!=NULL)
     {
         if (streq(darCodigoLinea(a->info),codigo)==TRUE)
@@ -233,18 +232,6 @@ void imprimirRecorrido(Lineas l, String codigoLinea)
     imprimirParadas(laux);
 }
 
-boolean lineaTieneParadas(Lineas l, String codigoLinea)
-{
-    boolean resp = FALSE;
-    Linea laux = Find(l, codigoLinea);
-
-    if(darCantidadParadas(laux) > 0)
-    {
-        resp = TRUE;
-    }
-
-    return resp;
-}
 
 void Eliminar(Lineas &a)
 {

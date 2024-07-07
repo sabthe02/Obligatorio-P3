@@ -31,7 +31,7 @@ Ciudad Primero (Ciudades ad)
 
 void Resto (Ciudades &ad)
 {
-
+    borrarCiudad(ad.arre[0]);
     ad.arre[0] = ad.arre[ad.tope-1];
     ad.tope--;
 
@@ -68,7 +68,7 @@ boolean Existe(Ciudades ad, String s)
 
 boolean EstaLlena(Ciudades ad)
 {
-    if (ad.tope == CANT_CIUDADES-1)
+    if (ad.tope == CANT_CIUDADES)
     {
         return TRUE;
     }
@@ -77,6 +77,7 @@ boolean EstaLlena(Ciudades ad)
         return FALSE;
     }
 }
+
 
 
 
@@ -100,6 +101,16 @@ void Listar(Ciudades ad)
         printf("\n");
     }
 }
+
+void Eliminar(Ciudades &c)
+{
+
+    for(int i = 0; i<c.tope; i++)
+    {
+        borrarCiudad(c.arre[i]);
+    }
+}
+
 
 
 

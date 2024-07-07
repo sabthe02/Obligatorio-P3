@@ -52,8 +52,6 @@ void agregarParadaALineas (Lineas &a, String codigo, Ciudad c);
 //Precondición: La línea correspondiente al código existe en el ABB
 void imprimirRecorrido(Lineas l, String codigoLinea);
 
-//Determina si la línea correspondiente al código de línea tiene alguna parada cargada en secuencia paradas
-boolean lineaTieneParadas(Lineas l, String codigoLinea);
 
 // Liberar memoria del ABB y dejarlo vacío
 void Eliminar(Lineas &a);

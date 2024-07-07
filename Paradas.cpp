@@ -45,7 +45,6 @@ Ciudad Front (Paradas L)
 void RemFront (Paradas &L)
 {
     Nodo * aux = L.prim -> sig;
-    borrarCiudad(L.prim->info);
     delete (L.prim);
     L.prim = aux;
     if (L.prim == NULL);
@@ -57,7 +56,6 @@ Ciudad Back (Paradas L)
     return (L.ult->info);
 
 }
-
 
 
 void imprimirParadasP (Paradas p)

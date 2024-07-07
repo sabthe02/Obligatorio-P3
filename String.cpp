@@ -13,7 +13,6 @@ void strdestruir (String &s)
 {
     delete []s;
     s = NULL;
-
 }
 
 int strlar (String s)
@@ -108,24 +107,25 @@ void strswp (String &s1,String &s2)
     strcop (s2,aux);
 }
 
-boolean strmen (String s1, String s2){
- int i = 0;
- boolean encontre = FALSE;
- boolean menor = FALSE;
-
- while ((!encontre) && (s1[i] != '\0') && (s2[i] != '\0'))
+boolean strmen (String s1, String s2)
 {
- if (s1[i] != s2[i])
- encontre = TRUE;
+    int i = 0;
+    boolean encontre = FALSE;
+    boolean menor = FALSE;
 
- if (s1[i] < s2[i])
- menor = TRUE;
- i++;
-}
- if ((!encontre) && (s2[i]!='\0'))
- menor = TRUE;
+    while ((!encontre) && (s1[i] != '\0') && (s2[i] != '\0'))
+    {
+        if (s1[i] != s2[i])
+            encontre = TRUE;
 
- return menor;
+        if (s1[i] < s2[i])
+            menor = TRUE;
+        i++;
+    }
+    if ((!encontre) && (s2[i]!='\0'))
+        menor = TRUE;
+
+    return menor;
 }
 
 boolean CompararStrings(String s1, String s2)
