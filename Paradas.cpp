@@ -25,6 +25,16 @@ void Insback (Paradas &L, Ciudad e)
     }
 }
 
+//void Insfront (Paradas &L, Ciudad e) {
+//    Nodo * nuevo = new Nodo;
+//    nuevo -> info = e;
+//    nuevo -> sig = L.prim;
+//    L.prim = nuevo;
+//    if (L.ult == NULL) {
+//        L.ult = nuevo;
+//    }
+//}
+
 boolean Empty (Paradas L)
 {
     boolean es = FALSE;
@@ -50,6 +60,14 @@ void RemFront (Paradas &L)
     if (L.prim == NULL);
     L.ult = NULL;
 }
+
+////void Remback (Paradas &L) {
+//    Nodo * aux = L.prim;
+//    while (aux->sig !=NULL) {
+//        aux=aux->sig;
+//    }
+//    delete aux;
+//}
 
 Ciudad Back (Paradas L)
 {

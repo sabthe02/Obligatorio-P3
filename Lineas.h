@@ -14,10 +14,10 @@ typedef nodo *Lineas;
 //Crea un diccionario vacío.
 void Make (Lineas &a);
 
-// Saber si el ABB está vacío
+// Saber si el diccionario está vacío
 boolean Vacio (Lineas a);
 
-// Inserta un elemento de tipo T en el diccionario.
+// Inserta un elemento de tipo Linea en el diccionario.
 //Precondición: el elemento a insertar no es miembro del diccionario.
 void Insert (Lineas &a, Linea valor);
 
@@ -28,7 +28,7 @@ boolean Member (Lineas a, String valor);
 //Precondición: el elemento es miembro del diccionario.
 Linea Find (Lineas a, String valor);
 
-// Sustituye el viejo elemento de tipo T en el diccionario por el nuevo elemento.
+// Sustituye el viejo elemento de tipo Linea en el diccionario por el nuevo elemento.
 //Precondición: el elemento a sustituir es miembro del diccionario.
 void Modify (Lineas &a, Linea viejo, Linea nuevo);
 

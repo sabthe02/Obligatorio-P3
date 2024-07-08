@@ -22,6 +22,9 @@ void Make (Paradas &L);
 //Insertar un elemento al final
 void Insback (Paradas &L, Ciudad e);
 
+////Insertar un elemento al principio (no usado, solo puesto porque es una orimitiva del Deque)
+//void Insfront (Paradas &L, Ciudad e);
+
 //Determinar si el Deque está vacío
 boolean Empty (Paradas L);
 
@@ -34,6 +37,9 @@ void RemFront (Paradas &L);
 //Devuelve el último elemento del deque
 // Precondición: el deque no está vacío
 Ciudad Back (Paradas L);
+
+//Devuelve el Deque sin el último elementeo (no usado, solo puesto porque es una orimitiva del Deque)
+//void Remback (Paradas &L);
 
 //Desplegar todos los elementosdel Deque
 void imprimirParadasP (Paradas p);

@@ -109,7 +109,7 @@ void Opcion3(Ciudades c, Grafo &graf)
                     }
                     else
                     {
-                        printf("El codigo de la ciudad 2 ingresado no es valido (numero menor a 0).\n\n");
+                        printf("El codigo de la ciudad 2 ingresado no es valido (menor a 0).\n\n");
                     }
                 }
                 else
@@ -124,7 +124,7 @@ void Opcion3(Ciudades c, Grafo &graf)
         }
         else
         {
-            printf("El codigo de la ciudad 1 ingresada no es valido (numero menor a 0).\n\n");
+            printf("El codigo de la ciudad 1 ingresada no es valido (menor a 0).\n\n");
         }
     }
     else
