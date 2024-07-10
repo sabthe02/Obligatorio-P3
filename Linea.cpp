@@ -24,7 +24,7 @@ void cargarLinea (Linea &l)
     scan(s);
     l.CodigoLinea = s;
     l.CantidadParadas = 0;
-    Make (l.paradas);
+    Crear (l.paradas);
 
 }
 

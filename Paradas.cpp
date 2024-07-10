@@ -1,6 +1,6 @@
 #include "Paradas.h"
 
-void Make (Paradas &L)
+void Crear (Paradas &L)
 {
     L.prim = NULL;
     L.ult  = NULL;
@@ -35,7 +35,7 @@ void Insback (Paradas &L, Ciudad e)
 //    }
 //}
 
-boolean Empty (Paradas L)
+boolean EsVacia (Paradas L)
 {
     boolean es = FALSE;
     if ((L.prim == NULL) && (L.ult == NULL))
@@ -46,13 +46,13 @@ boolean Empty (Paradas L)
 }
 
 
-Ciudad Front (Paradas L)
+Ciudad Primero (Paradas L)
 {
     return (L.prim -> info);
 }
 
 
-void RemFront (Paradas &L)
+void Resto (Paradas &L)
 {
     Nodo * aux = L.prim -> sig;
     delete (L.prim);
@@ -61,13 +61,6 @@ void RemFront (Paradas &L)
     L.ult = NULL;
 }
 
-////void Remback (Paradas &L) {
-//    Nodo * aux = L.prim;
-//    while (aux->sig !=NULL) {
-//        aux=aux->sig;
-//    }
-//    delete aux;
-//}
 
 Ciudad Back (Paradas L)
 {
@@ -75,13 +68,36 @@ Ciudad Back (Paradas L)
 
 }
 
+Ciudad Kesimo (Paradas L, int K)
+{
+    int i = 0;
+    while(i<=K)
+    {
+        L.prim = L.prim->sig;
+        i++;
+    }
+
+    return L.prim->info;
+}
+
+int Largo(Paradas L)
+{
+    int i = 0;
+    while(L.prim != NULL)
+    {
+        L.prim = L.prim->sig;
+        i++;
+    }
+
+    return i;
+}
 
 void imprimirParadasP (Paradas p)
 {
     while(p.prim != NULL)
     {
         mostrarNombreCiudad(p.prim->info);
-        RemFront(p);
+        p.prim = p.prim->sig;
     }
 }
 
@@ -89,7 +105,7 @@ void Eliminar(Paradas &p)
 {
     while(p.prim != NULL)
     {
-        RemFront(p);
+        Resto(p);
     }
 }
 

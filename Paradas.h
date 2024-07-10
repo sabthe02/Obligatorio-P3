@@ -16,35 +16,42 @@ typedef struct
 
 
 /*Primitvas*/
-//Crear un Deque
-void Make (Paradas &L);
+
+//Crear una secuencia
+void Crear (Paradas &L);
 
 //Insertar un elemento al final
 void Insback (Paradas &L, Ciudad e);
 
-////Insertar un elemento al principio (no usado, solo puesto porque es una orimitiva del Deque)
-//void Insfront (Paradas &L, Ciudad e);
+////Insertar un elemento al principio
+void Insfront (Paradas &L, Ciudad e);
 
-//Determinar si el Deque está vacío
-boolean Empty (Paradas L);
+//Determinar si la secuencia está vacía
+boolean EsVacia (Paradas L);
 
-//Obtener el primer elemento al Deque
-Ciudad Front (Paradas L);
+//Obtener el primer elemento de la secuencia
+//Precondición: la secuencia no es vacía.
+Ciudad Primero (Paradas L);
 
-//Devuelve el Deque sin su primer elemento
-void RemFront (Paradas &L);
+//Devuelve la secuencia sin su primer elemento
+//Precondición: la secuencia no es vacía
+void Resto (Paradas &L);
 
-//Devuelve el último elemento del deque
-// Precondición: el deque no está vacío
+//Devuelve el largo de la secuencia
+int Largo(Paradas L);
+
+//Devuelve el elemento en la posicion K de la secuencia
+//Precondición: El largo de la secuencia es mayor o igual a K.
+Ciudad Kesimo (Paradas L, int K);
+
+//Devuelve el último elemento de la secuencia
+//Precondición: la secuencia no está vacío
 Ciudad Back (Paradas L);
 
-//Devuelve el Deque sin el último elementeo (no usado, solo puesto porque es una orimitiva del Deque)
-//void Remback (Paradas &L);
-
-//Desplegar todos los elementosdel Deque
+//Desplegar todos los elementos de la secuencia.
 void imprimirParadasP (Paradas p);
 
-//Liberar la memoria del Deque y dejarlo vacío
+//Liberar la memoria de la secuencia
 void Eliminar(Paradas &p);
 
 

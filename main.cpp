@@ -262,7 +262,7 @@ void Opcion7 (Lineas &lineas, Ciudades ciudades, Grafo grafo)
 
                         agregar = TRUE;
 
-                        if (Empty(darParadas(Find(lineas,num))) == FALSE)
+                        if (EsVacia(darParadas(Find(lineas,num))) == FALSE)
                         {
 
                                 if (buscarRuta(grafo, codigo, darNumeroCiudad(Back(darParadas(Find(lineas,num))))) == FALSE)
