@@ -229,13 +229,16 @@
 	"Grafo.h"
 	"Lineas.h"
 
-1720608813 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\grafo.h
+1721077574 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\grafo.h
 	"Boolean.h"
 	"constantes.h"
 
-1720608813 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.cpp
+1721077429 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.cpp
 	"Paradas.h"
 
 1720608814 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.cpp
 	"String.h"
+
+1721077377 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\grafo.cpp
+	"Grafo.h"
 

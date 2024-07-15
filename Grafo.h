@@ -10,7 +10,6 @@ typedef int Grafo[CANT_CIUDADES][CANT_CIUDADES];
 
 
 /*Operaciones Primitivas*/
-void Crear (Grafo &g);
 
 //Crea un grafo vacío.
 void Crear (Grafo &g);
