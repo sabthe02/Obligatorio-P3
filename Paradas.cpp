@@ -25,15 +25,15 @@ void Insback (Paradas &L, Ciudad e)
     }
 }
 
-//void Insfront (Paradas &L, Ciudad e) {
-//    Nodo * nuevo = new Nodo;
-//    nuevo -> info = e;
-//    nuevo -> sig = L.prim;
-//    L.prim = nuevo;
-//    if (L.ult == NULL) {
-//        L.ult = nuevo;
-//    }
-//}
+void Insfront (Paradas &L, Ciudad e) {
+    Nodo * nuevo = new Nodo;
+    nuevo -> info = e;
+    nuevo -> sig = L.prim;
+    L.prim = nuevo;
+    if (L.ult == NULL) {
+        L.ult = nuevo;
+    }
+}
 
 boolean EsVacia (Paradas L)
 {

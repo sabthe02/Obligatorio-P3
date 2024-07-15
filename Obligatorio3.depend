@@ -183,3 +183,59 @@
 1720130271 source:/Users/santiago/Downloads/Obligatorio-P3-main/Linea.cpp
 	"Linea.h"
 
+1720608813 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1720608813 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\boolean.h
+	<stdio.h>
+
+1720608813 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.cpp
+	"Ciudad.h"
+
+1720608813 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudad.h
+	"String.h"
+
+1720608813 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.h
+	"Boolean.h"
+
+1720608813 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudades.cpp
+	"Ciudades.h"
+
+1720608813 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\ciudades.h
+	"Ciudad.h"
+	"constantes.h"
+
+1720608813 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\constantes.h
+
+1720608813 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.cpp
+	"Linea.h"
+
+1720608813 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\linea.h
+	"Paradas.h"
+	"Ciudad.h"
+
+1720608914 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.h
+	"Ciudad.h"
+
+1720608813 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.cpp
+	"Lineas.h"
+
+1720608813 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\lineas.h
+	"Linea.h"
+
+1720608813 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\main.cpp
+	<stdio.h>
+	"Ciudades.h"
+	"Grafo.h"
+	"Lineas.h"
+
+1720608813 c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\grafo.h
+	"Boolean.h"
+	"constantes.h"
+
+1720608813 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\paradas.cpp
+	"Paradas.h"
+
+1720608814 source:c:\users\sabth\ude licenciatura en informática\2°\programación iii\obligatorio\string.cpp
+	"String.h"
+

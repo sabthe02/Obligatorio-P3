@@ -15,18 +15,6 @@ void Crear (Grafo &g)
 
 }
 
-void agregarAristaNoDirigido (Grafo &g, int fila, int columna)
-{
-
-    g[fila][columna] = 1;
-    g[columna][fila] = 1;
-}
-void InsertarVertice (Grafo &g, int vertice)
-{
-
-
-
-}
 
 void InsertarArista (Grafo &g, int fila, int columna)
 {
