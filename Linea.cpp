@@ -20,8 +20,16 @@ void cargarLinea (Linea &l)
 {
     printf("\nIngrese codigo de linea: ");
     String s;
+
     strcrear(s);
     scan(s);
+
+    while(validarAlfanumerico(s) == FALSE)
+    {
+        printf("El codigo de la linea solamente puede contener caracteres alfanumericos. \nFavor ingrese nuevamente: ");
+        scan(s);
+    }
+
     l.CodigoLinea = s;
     l.CantidadParadas = 0;
     Crear (l.paradas);

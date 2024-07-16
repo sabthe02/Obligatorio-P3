@@ -19,8 +19,10 @@ void mostrarNombreCiudad(Ciudad c);
 void borrarCiudad(Ciudad &c);
 
 /*Selectoras*/
+//Devuelve el número de la ciudad
 int darNumeroCiudad (Ciudad c);
 
+//Devuelve el nombre de la ciudad
 String darNombreCiudad (Ciudad c);
 
 #endif // CIUDAD_H_INCLUDED

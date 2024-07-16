@@ -5,7 +5,6 @@
 #include "constantes.h"
 
 
-
 typedef int Grafo[CANT_CIUDADES][CANT_CIUDADES];
 
 
@@ -14,8 +13,11 @@ typedef int Grafo[CANT_CIUDADES][CANT_CIUDADES];
 //Crea un grafo vacío.
 void Crear (Grafo &g);
 
-//Grafo Inserta la nueva arista al grafo. Precondición: la arista no pertenece al grafo.
+//Grafo Inserta la nueva arista al grafo.
+//Precondición: la arista no pertenece al grafo.
 void InsertarArista (Grafo &g, int fila, int columna);
+
+//Comentario: Omitimos el InsertarVertice, porque el vértice viene dado por i y j
 
 //Determina si en el grafo existe el vértice especificado.
 boolean PerteneceVertice(Grafo g, int vertice);
@@ -23,8 +25,11 @@ boolean PerteneceVertice(Grafo g, int vertice);
 //Determina si en el grafo existe la arista especificada.
 boolean PerteneceArista(Grafo g, int fila, int columna);
 
-//Devuelve el grado del vértice especificado. Precondición: el vértice pertenece al grafo
+//Devuelve el grado del vértice especificado.
+//Precondición: el vértice pertenece al grafo
 int GradoVertice (Grafo g, int vertice);
+
+/*Operaciones adicionales */
 
 //Determina si existe una ruta entre dos ciudades.
 boolean buscarRuta (Grafo g, int verticeA, int verticeB);

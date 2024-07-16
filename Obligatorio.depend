@@ -170,62 +170,121 @@
 1720280926 source:/Users/santiago/Desktop/Obligatorio-P3-main/String.cpp
 	"String.h"
 
-1720476384 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Boolean.cpp
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Boolean.cpp
 	"Boolean.h"
 
-1720476384 /Users/santiago/Downloads/Obligatorio-P3-main 2/Boolean.h
+1721077589 /Users/santiago/Downloads/Obligatorio-P3-main 2/Boolean.h
 	<stdio.h>
 
-1720476384 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Ciudad.cpp
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Ciudad.cpp
 	"Ciudad.h"
 
-1720476384 /Users/santiago/Downloads/Obligatorio-P3-main 2/Ciudad.h
+1721077589 /Users/santiago/Downloads/Obligatorio-P3-main 2/Ciudad.h
 	"String.h"
 
-1720476384 /Users/santiago/Downloads/Obligatorio-P3-main 2/String.h
+1721077589 /Users/santiago/Downloads/Obligatorio-P3-main 2/String.h
 	"Boolean.h"
 
-1720476384 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Ciudades.cpp
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Ciudades.cpp
 	"Ciudades.h"
 
-1720476384 /Users/santiago/Downloads/Obligatorio-P3-main 2/Ciudades.h
+1721077589 /Users/santiago/Downloads/Obligatorio-P3-main 2/Ciudades.h
 	"Ciudad.h"
 	"constantes.h"
 
-1720476384 /Users/santiago/Downloads/Obligatorio-P3-main 2/constantes.h
+1721077589 /Users/santiago/Downloads/Obligatorio-P3-main 2/constantes.h
 
-1720476384 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Grafo.cpp
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Grafo.cpp
 	"Grafo.h"
 
-1720476384 /Users/santiago/Downloads/Obligatorio-P3-main 2/Grafo.h
+1721077589 /Users/santiago/Downloads/Obligatorio-P3-main 2/Grafo.h
 	"Boolean.h"
 	"constantes.h"
 
-1720557074 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Linea.cpp
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Linea.cpp
 	"Linea.h"
 
-1720476384 /Users/santiago/Downloads/Obligatorio-P3-main 2/Linea.h
+1721077589 /Users/santiago/Downloads/Obligatorio-P3-main 2/Linea.h
 	"Paradas.h"
 	"Ciudad.h"
 
-1720560298 /Users/santiago/Downloads/Obligatorio-P3-main 2/Paradas.h
+1721077589 /Users/santiago/Downloads/Obligatorio-P3-main 2/Paradas.h
 	"Ciudad.h"
 
-1720476384 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Lineas.cpp
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Lineas.cpp
 	"Lineas.h"
 
-1720476384 /Users/santiago/Downloads/Obligatorio-P3-main 2/Lineas.h
+1721077589 /Users/santiago/Downloads/Obligatorio-P3-main 2/Lineas.h
 	"Linea.h"
 
-1720557210 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/main.cpp
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/main.cpp
 	<stdio.h>
 	"Ciudades.h"
 	"Grafo.h"
 	"Lineas.h"
 
-1720476384 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/String.cpp
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/String.cpp
 	"String.h"
 
-1720560291 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Paradas.cpp
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P3-main 2/Paradas.cpp
 	"Paradas.h"
+
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P32/Boolean.cpp
+	"Boolean.h"
+
+1721077589 /Users/santiago/Downloads/Obligatorio-P32/Boolean.h
+	<stdio.h>
+
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P32/Ciudad.cpp
+	"Ciudad.h"
+
+1721077589 /Users/santiago/Downloads/Obligatorio-P32/Ciudad.h
+	"String.h"
+
+1721088015 /Users/santiago/Downloads/Obligatorio-P32/String.h
+	"Boolean.h"
+
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P32/Ciudades.cpp
+	"Ciudades.h"
+
+1721077589 /Users/santiago/Downloads/Obligatorio-P32/Ciudades.h
+	"Ciudad.h"
+	"constantes.h"
+
+1721085643 /Users/santiago/Downloads/Obligatorio-P32/constantes.h
+
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P32/Grafo.cpp
+	"Grafo.h"
+
+1721077589 /Users/santiago/Downloads/Obligatorio-P32/Grafo.h
+	"Boolean.h"
+	"constantes.h"
+
+1721088015 source:/Users/santiago/Downloads/Obligatorio-P32/Linea.cpp
+	"Linea.h"
+
+1721077589 /Users/santiago/Downloads/Obligatorio-P32/Linea.h
+	"Paradas.h"
+	"Ciudad.h"
+
+1721077589 /Users/santiago/Downloads/Obligatorio-P32/Paradas.h
+	"Ciudad.h"
+
+1721077589 source:/Users/santiago/Downloads/Obligatorio-P32/Lineas.cpp
+	"Lineas.h"
+
+1721077589 /Users/santiago/Downloads/Obligatorio-P32/Lineas.h
+	"Linea.h"
+
+1721088015 source:/Users/santiago/Downloads/Obligatorio-P32/main.cpp
+	<stdio.h>
+	"Ciudades.h"
+	"Grafo.h"
+	"Lineas.h"
+
+1721087181 source:/Users/santiago/Downloads/Obligatorio-P32/Paradas.cpp
+	"Paradas.h"
+
+1721088028 source:/Users/santiago/Downloads/Obligatorio-P32/String.cpp
+	"String.h"
 

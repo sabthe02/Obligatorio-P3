@@ -94,11 +94,16 @@ int Largo(Paradas L)
 
 void imprimirParadasP (Paradas p)
 {
+    int i = 0;
     while(p.prim != NULL)
     {
+        i++;
+        printf("Parada %d: ", i);
         mostrarNombreCiudad(p.prim->info);
         p.prim = p.prim->sig;
     }
+
+    printf("\n\n");
 }
 
 void Eliminar(Paradas &p)

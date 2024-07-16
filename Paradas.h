@@ -15,15 +15,15 @@ typedef struct
 } Paradas;
 
 
-/*Primitvas*/
+/*Operaciones primitvas*/
 
 //Crear una secuencia
 void Crear (Paradas &L);
 
-//Insertar un elemento al final
+//Insertar un elemento al final de la secuencia
 void Insback (Paradas &L, Ciudad e);
 
-////Insertar un elemento al principio
+////Insertar un elemento al principio de la secuencia
 void Insfront (Paradas &L, Ciudad e);
 
 //Determinar si la secuencia está vacía
@@ -44,11 +44,14 @@ int Largo(Paradas L);
 //Precondición: El largo de la secuencia es mayor o igual a K.
 Ciudad Kesimo (Paradas L, int K);
 
+/*Operaciones adicionales*/
+
 //Devuelve el último elemento de la secuencia
-//Precondición: la secuencia no está vacío
+//Precondición: la secuencia no está vacía
 Ciudad Back (Paradas L);
 
 //Desplegar todos los elementos de la secuencia.
+//Precondición: Paradas no está vacía
 void imprimirParadasP (Paradas p);
 
 //Liberar la memoria de la secuencia

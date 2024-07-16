@@ -149,3 +149,36 @@ boolean CompararStrings(String s1, String s2)
 }
 
 
+boolean validarAlfanumerico (String s)
+{
+    boolean es = TRUE;
+    int i = 0;
+
+    if (!esVacio(s))
+    {
+
+        while (es && (s[i] != '\0'))
+        {
+            if (!((s[i] >=  'a' && s[i] <= 'z') || ((s[i] >=  'A' && s[i] <= 'Z')) || ((s[i] >=  '0' && s[i] <= '9'))))
+            {
+                es = FALSE;
+            }
+            else
+            {
+                i++;
+            }
+        }
+
+        if ((s[i] != '\0'))
+        {
+            es = FALSE;
+        }
+    }
+    else
+    {
+        es = FALSE;
+    }
+
+    return es;
+}
+

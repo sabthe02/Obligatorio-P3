@@ -128,9 +128,9 @@ void Opcion3(Ciudades c, Grafo &graf)
         }
     }
     else
-        {
+    {
         printf("\nEl codigo de la ciudad 1 debe ser un numero entero seguido de enter. \n\n");
-        }
+    }
 
 }
 
@@ -140,7 +140,8 @@ void Opcion4(Ciudades c, Grafo graf)
     char t3, t4;
 
     printf("Ingrese el codigo de la ciudad 1: ");
-    if (scanf("%d%c", &ciudad1, &t3) ==2 && (t3=='\n')) {
+    if (scanf("%d%c", &ciudad1, &t3) ==2 && (t3=='\n'))
+    {
 
         if(ciudad1>=0)
         {
@@ -148,7 +149,8 @@ void Opcion4(Ciudades c, Grafo graf)
             if(ciudad1<Largo(c))
             {
                 printf("Ingrese el codigo de la ciudad 2: ");
-                if (scanf("%d%c", &ciudad2, &t4)==2 && (t4=='\n')) {
+                if (scanf("%d%c", &ciudad2, &t4)==2 && (t4=='\n'))
+                {
 
                     if(ciudad2>=0)
                     {
@@ -237,10 +239,11 @@ void Opcion6 (Lineas lineas)
 
 void Opcion7 (Lineas &lineas, Ciudades ciudades, Grafo grafo)
 {
-    if (Vacio(lineas) ==FALSE){
+    if (Vacio(lineas) ==FALSE)
+    {
         boolean agregar;
         String num;
-        int codigo;
+        int codigo, ultimoCodigo;
         char te;
         strcrear(num);
 
@@ -255,23 +258,26 @@ void Opcion7 (Lineas &lineas, Ciudades ciudades, Grafo grafo)
             if (Member(lineas,num) == TRUE)
             {
                 printf("\nIngrese numero de ciudad para agregar una parada en esa ciudad: ");
-                if (scanf("%d%c", &codigo, &te)==2 && (te=='\n')){
+                if (scanf("%d%c", &codigo, &te)==2 && (te=='\n'))
+                {
 
                     if(codigo >=0 && Largo(ciudades) > codigo)
                     {
-
                         agregar = TRUE;
 
                         if (EsVacia(darParadas(Find(lineas,num))) == FALSE)
                         {
-
-                                if (buscarRuta(grafo, codigo, darNumeroCiudad(Back(darParadas(Find(lineas,num))))) == FALSE)
-                                {
-
-                                    agregar = FALSE;
-                                    printf("\nNo existe ruta entre la ciudad y el destino de la linea a agregar\n\n");
-                                }
-
+                            ultimoCodigo = darNumeroCiudad(Back(darParadas(Find(lineas,num))));
+                            if(codigo == ultimoCodigo)
+                            {
+                                agregar = FALSE;
+                                printf("La ultima parada no puede ser igual a la parada que se quiere agregar\n\n");
+                            }
+                            else if (PerteneceArista(grafo, codigo, ultimoCodigo) == FALSE)
+                            {
+                                agregar = FALSE;
+                                printf("\nNo existe ruta entre la ciudad y el destino de la linea a agregar\n\n");
+                            }
                         }
                         else
                         {
@@ -418,12 +424,11 @@ int main()
             printf("Por favor ingrese un numero entero segun el menu, seguido de enter\n\n");
             error = TRUE;
         }
-    } while(opcion != 0 || (error ==TRUE));
+    }
+    while(opcion != 0 || (error ==TRUE));
 
     Eliminar(ciudades);
     Eliminar(lineas);
-
-
 
     return 0;
 }

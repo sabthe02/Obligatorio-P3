@@ -39,6 +39,7 @@ boolean strmen(String str1, String str2);
 //Devuelve True si s1 es igual que s2
 boolean CompararStrings(String s1, String s2);
 
-
+//Devuelve TRUE si el contenido del string unicamente contiene caracteres alfanumercos
+boolean validarAlfanumerico (String s1);
 
 #endif // STRING_H_INCLUDED
